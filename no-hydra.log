@@ -1,0 +1,1019 @@
+[23:57:59.650] D [  main  ] loading config file wct-sim-fans-hydra.jsonnet
+[23:57:59.807] D [  main  ] config requests plugin: "WireCellGen"
+[23:57:59.807] D [  main  ] config requests plugin: "WireCellPgraph"
+[23:57:59.807] D [  main  ] config requests plugin: "WireCellSio"
+[23:57:59.807] D [  main  ] config requests plugin: "WireCellSigProc"
+[23:57:59.807] D [  main  ] config requests plugin: "WireCellRoot"
+[23:57:59.807] D [  main  ] config requests plugin: "WireCellTbb"
+[23:57:59.807] D [  main  ] config requests plugin: "WireCellImg"
+[23:57:59.807] D [  main  ] config requests app: "TbbFlow"
+[23:57:59.808] D [  main  ] adding plugin: "WireCellGen"
+[23:57:59.820] D [  sys   ] loaded plugin #1 "WireCellGen" from library "libWireCellGen.so": 0x106d340
+[23:57:59.820] D [  main  ] adding plugin: "WireCellPgraph"
+[23:57:59.822] D [  sys   ] loaded plugin #2 "WireCellPgraph" from library "libWireCellPgraph.so": 0x106d5c0
+[23:57:59.822] D [  main  ] adding plugin: "WireCellSio"
+[23:57:59.827] D [  sys   ] loaded plugin #3 "WireCellSio" from library "libWireCellSio.so": 0x106cd00
+[23:57:59.827] D [  main  ] adding plugin: "WireCellSigProc"
+[23:57:59.831] D [  sys   ] loaded plugin #4 "WireCellSigProc" from library "libWireCellSigProc.so": 0x106c940
+[23:57:59.831] D [  main  ] adding plugin: "WireCellRoot"
+[23:57:59.992] D [  sys   ] loaded plugin #5 "WireCellRoot" from library "libWireCellRoot.so": 0x1147fb0
+[23:57:59.992] D [  main  ] adding plugin: "WireCellTbb"
+[23:58:00.000] D [  sys   ] loaded plugin #6 "WireCellTbb" from library "libWireCellTbb.so": 0x1148540
+[23:58:00.000] D [  main  ] adding plugin: "WireCellImg"
+[23:58:00.007] D [  sys   ] loaded plugin #7 "WireCellImg" from library "libWireCellImg.so": 0x114b130
+[23:58:00.008] D [  main  ] constructing component: "TrackDepos":""
+[23:58:00.008] D [  main  ] constructing component: "Random":""
+[23:58:00.008] D [  main  ] constructing component: "Drifter":""
+[23:58:00.008] D [  main  ] constructing component: "DepoBagger":"bagger"
+[23:58:00.008] D [  main  ] constructing component: "DepoSetFanout":"sn_mag_fout_0_0"
+[23:58:00.008] D [  main  ] constructing component: "DepoSetFanout":"sn_mag_fout_1_0"
+[23:58:00.008] D [  main  ] constructing component: "DepoSetFanout":"sn_mag_fout_1_1"
+[23:58:00.008] D [  main  ] constructing component: "DepoSetFanout":"sn_mag_fout_1_2"
+[23:58:00.008] D [  main  ] constructing component: "DepoSetFanout":"sn_mag_fout_1_3"
+[23:58:00.008] D [  main  ] constructing component: "FrameFanin":"sn_mag_fin_1_0"
+[23:58:00.008] D [  main  ] constructing component: "FrameFanin":"sn_mag_fin_1_1"
+[23:58:00.008] D [  main  ] constructing component: "FrameFanin":"sn_mag_fin_1_2"
+[23:58:00.008] D [  main  ] constructing component: "FrameFanin":"sn_mag_fin_1_3"
+[23:58:00.008] D [  main  ] constructing component: "FrameFanin":"sn_mag_fin_0_0"
+[23:58:00.008] D [  main  ] constructing component: "DepoSetFilter":"ds-filter-switch-0"
+[23:58:00.008] D [  main  ] constructing component: "WireSchemaFile":""
+[23:58:00.009] D [  main  ] constructing component: "AnodePlane":"crm0"
+[23:58:00.009] D [  main  ] constructing component: "FftwDFT":""
+[23:58:00.009] D [  main  ] constructing component: "FieldResponse":"field0"
+[23:58:00.009] D [  main  ] constructing component: "ColdElecResponse":""
+[23:58:00.009] D [  main  ] constructing component: "RCResponse":""
+[23:58:00.009] D [  main  ] constructing component: "ResponseSys":""
+[23:58:00.009] D [  main  ] constructing component: "PlaneImpactResponse":"PIRfield0plane0"
+[23:58:00.009] D [  main  ] constructing component: "PlaneImpactResponse":"PIRfield0plane1"
+[23:58:00.009] D [  main  ] constructing component: "PlaneImpactResponse":"PIRfield0plane2"
+[23:58:00.009] D [  main  ] constructing component: "DepoTransform":"ductor0"
+[23:58:00.009] D [  main  ] constructing component: "Reframer":"reframer0"
+[23:58:00.009] D [  main  ] constructing component: "EmpiricalNoiseModel":"empericalnoisecrm0"
+[23:58:00.009] D [  main  ] constructing component: "AddNoise":"addnoiseempericalnoisecrm0"
+[23:58:00.009] D [  main  ] constructing component: "Digitizer":"digitizer0"
+[23:58:00.009] D [  main  ] constructing component: "LfFilter":"ROI_tight_lf"
+[23:58:00.009] D [  main  ] constructing component: "LfFilter":"ROI_tighter_lf"
+[23:58:00.009] D [  main  ] constructing component: "LfFilter":"ROI_loose_lf"
+[23:58:00.009] D [  main  ] constructing component: "HfFilter":"Gaus_tight"
+[23:58:00.009] D [  main  ] constructing component: "HfFilter":"Gaus_wide"
+[23:58:00.009] D [  main  ] constructing component: "HfFilter":"Wiener_tight_U"
+[23:58:00.009] D [  main  ] constructing component: "HfFilter":"Wiener_tight_V"
+[23:58:00.009] D [  main  ] constructing component: "HfFilter":"Wiener_tight_W"
+[23:58:00.009] D [  main  ] constructing component: "HfFilter":"Wiener_wide_U"
+[23:58:00.009] D [  main  ] constructing component: "HfFilter":"Wiener_wide_V"
+[23:58:00.009] D [  main  ] constructing component: "HfFilter":"Wiener_wide_W"
+[23:58:00.009] D [  main  ] constructing component: "HfFilter":"Wire_ind"
+[23:58:00.009] D [  main  ] constructing component: "HfFilter":"Wire_col"
+[23:58:00.009] D [  main  ] constructing component: "OmnibusSigProc":"crm0sigproc0"
+[23:58:00.009] D [  main  ] constructing component: "MagnifySink":"magdecon0"
+[23:58:00.009] D [  main  ] constructing component: "DepoSetFilter":"ds-filter-switch-1"
+[23:58:00.009] D [  main  ] constructing component: "AnodePlane":"crm1"
+[23:58:00.009] D [  main  ] constructing component: "DepoTransform":"ductor1"
+[23:58:00.009] D [  main  ] constructing component: "Reframer":"reframer1"
+[23:58:00.009] D [  main  ] constructing component: "EmpiricalNoiseModel":"empericalnoisecrm1"
+[23:58:00.009] D [  main  ] constructing component: "AddNoise":"addnoiseempericalnoisecrm1"
+[23:58:00.009] D [  main  ] constructing component: "Digitizer":"digitizer1"
+[23:58:00.010] D [  main  ] constructing component: "OmnibusSigProc":"crm1sigproc1"
+[23:58:00.010] D [  main  ] constructing component: "MagnifySink":"magdecon1"
+[23:58:00.010] D [  main  ] constructing component: "DepoSetFilter":"ds-filter-switch-4"
+[23:58:00.010] D [  main  ] constructing component: "AnodePlane":"crm4"
+[23:58:00.010] D [  main  ] constructing component: "DepoTransform":"ductor4"
+[23:58:00.010] D [  main  ] constructing component: "Reframer":"reframer4"
+[23:58:00.010] D [  main  ] constructing component: "EmpiricalNoiseModel":"empericalnoisecrm4"
+[23:58:00.010] D [  main  ] constructing component: "AddNoise":"addnoiseempericalnoisecrm4"
+[23:58:00.010] D [  main  ] constructing component: "Digitizer":"digitizer4"
+[23:58:00.010] D [  main  ] constructing component: "OmnibusSigProc":"crm4sigproc4"
+[23:58:00.010] D [  main  ] constructing component: "MagnifySink":"magdecon4"
+[23:58:00.010] D [  main  ] constructing component: "DepoSetFilter":"ds-filter-switch-5"
+[23:58:00.010] D [  main  ] constructing component: "AnodePlane":"crm5"
+[23:58:00.010] D [  main  ] constructing component: "DepoTransform":"ductor5"
+[23:58:00.010] D [  main  ] constructing component: "Reframer":"reframer5"
+[23:58:00.010] D [  main  ] constructing component: "EmpiricalNoiseModel":"empericalnoisecrm5"
+[23:58:00.010] D [  main  ] constructing component: "AddNoise":"addnoiseempericalnoisecrm5"
+[23:58:00.010] D [  main  ] constructing component: "Digitizer":"digitizer5"
+[23:58:00.010] D [  main  ] constructing component: "OmnibusSigProc":"crm5sigproc5"
+[23:58:00.010] D [  main  ] constructing component: "MagnifySink":"magdecon5"
+[23:58:00.010] D [  main  ] constructing component: "DumpFrames":""
+[23:58:00.011] D [  main  ] constructing component: "TbbFlow":""
+[23:58:00.011] D [  main  ] constructing app: "TbbFlow"
+[23:58:00.011] D [  gen   ] <TrackDepos:> log name: "gen/TrackDepos:"
+[23:58:00.011] D [  gen   ] <Drifter:> log name: "gen/Drifter:"
+[23:58:00.011] D [  gen   ] <DepoBagger:bagger> log name: "gen/DepoBagger:bagger"
+[23:58:00.011] D [  glue  ] <DepoSetFanout:sn_mag_fout_0_0> log name: "glue/DepoSetFanout:sn_mag_fout_0_0"
+[23:58:00.011] D [  glue  ] <DepoSetFanout:sn_mag_fout_1_0> log name: "glue/DepoSetFanout:sn_mag_fout_1_0"
+[23:58:00.011] D [  glue  ] <DepoSetFanout:sn_mag_fout_1_1> log name: "glue/DepoSetFanout:sn_mag_fout_1_1"
+[23:58:00.011] D [  glue  ] <DepoSetFanout:sn_mag_fout_1_2> log name: "glue/DepoSetFanout:sn_mag_fout_1_2"
+[23:58:00.011] D [  glue  ] <DepoSetFanout:sn_mag_fout_1_3> log name: "glue/DepoSetFanout:sn_mag_fout_1_3"
+[23:58:00.011] D [  glue  ] <FrameFanin:sn_mag_fin_1_0> log name: "glue/FrameFanin:sn_mag_fin_1_0"
+[23:58:00.012] D [  glue  ] <FrameFanin:sn_mag_fin_1_1> log name: "glue/FrameFanin:sn_mag_fin_1_1"
+[23:58:00.012] D [  glue  ] <FrameFanin:sn_mag_fin_1_2> log name: "glue/FrameFanin:sn_mag_fin_1_2"
+[23:58:00.012] D [  glue  ] <FrameFanin:sn_mag_fin_1_3> log name: "glue/FrameFanin:sn_mag_fin_1_3"
+[23:58:00.012] D [  glue  ] <FrameFanin:sn_mag_fin_0_0> log name: "glue/FrameFanin:sn_mag_fin_0_0"
+[23:58:00.012] D [  gen   ] <DepoSetFilter:ds-filter-switch-0> log name: "gen/DepoSetFilter:ds-filter-switch-0"
+[23:58:00.012] D [  geom  ] <AnodePlane:crm0> log name: "geom/AnodePlane:crm0"
+[23:58:00.012] D [  gen   ] <PlaneImpactResponse:PIRfield0plane0> log name: "gen/PlaneImpactResponse:PIRfield0plane0"
+[23:58:00.012] D [  gen   ] <PlaneImpactResponse:PIRfield0plane1> log name: "gen/PlaneImpactResponse:PIRfield0plane1"
+[23:58:00.012] D [  gen   ] <PlaneImpactResponse:PIRfield0plane2> log name: "gen/PlaneImpactResponse:PIRfield0plane2"
+[23:58:00.012] D [  gen   ] <DepoTransform:ductor0> log name: "gen/DepoTransform:ductor0"
+[23:58:00.012] D [  gen   ] <Reframer:reframer0> log name: "gen/Reframer:reframer0"
+[23:58:00.012] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> log name: "gen/EmpiricalNoiseModel:empericalnoisecrm0"
+[23:58:00.012] D [  gen   ] <IncoherentAddNoise:addnoiseempericalnoisecrm0> log name: "gen/IncoherentAddNoise:addnoiseempericalnoisecrm0"
+[23:58:00.012] D [  gen   ] <Digitizer:digitizer0> log name: "gen/Digitizer:digitizer0"
+[23:58:00.013] D [sigproc ] <OmnibusSigProc:crm0sigproc0> log name: "sigproc/OmnibusSigProc:crm0sigproc0"
+[23:58:00.013] D [  gen   ] <DepoSetFilter:ds-filter-switch-1> log name: "gen/DepoSetFilter:ds-filter-switch-1"
+[23:58:00.013] D [  geom  ] <AnodePlane:crm1> log name: "geom/AnodePlane:crm1"
+[23:58:00.013] D [  gen   ] <DepoTransform:ductor1> log name: "gen/DepoTransform:ductor1"
+[23:58:00.013] D [  gen   ] <Reframer:reframer1> log name: "gen/Reframer:reframer1"
+[23:58:00.013] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> log name: "gen/EmpiricalNoiseModel:empericalnoisecrm1"
+[23:58:00.013] D [  gen   ] <IncoherentAddNoise:addnoiseempericalnoisecrm1> log name: "gen/IncoherentAddNoise:addnoiseempericalnoisecrm1"
+[23:58:00.013] D [  gen   ] <Digitizer:digitizer1> log name: "gen/Digitizer:digitizer1"
+[23:58:00.013] D [sigproc ] <OmnibusSigProc:crm1sigproc1> log name: "sigproc/OmnibusSigProc:crm1sigproc1"
+[23:58:00.013] D [  gen   ] <DepoSetFilter:ds-filter-switch-4> log name: "gen/DepoSetFilter:ds-filter-switch-4"
+[23:58:00.013] D [  geom  ] <AnodePlane:crm4> log name: "geom/AnodePlane:crm4"
+[23:58:00.013] D [  gen   ] <DepoTransform:ductor4> log name: "gen/DepoTransform:ductor4"
+[23:58:00.013] D [  gen   ] <Reframer:reframer4> log name: "gen/Reframer:reframer4"
+[23:58:00.013] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> log name: "gen/EmpiricalNoiseModel:empericalnoisecrm4"
+[23:58:00.013] D [  gen   ] <IncoherentAddNoise:addnoiseempericalnoisecrm4> log name: "gen/IncoherentAddNoise:addnoiseempericalnoisecrm4"
+[23:58:00.013] D [  gen   ] <Digitizer:digitizer4> log name: "gen/Digitizer:digitizer4"
+[23:58:00.013] D [sigproc ] <OmnibusSigProc:crm4sigproc4> log name: "sigproc/OmnibusSigProc:crm4sigproc4"
+[23:58:00.013] D [  gen   ] <DepoSetFilter:ds-filter-switch-5> log name: "gen/DepoSetFilter:ds-filter-switch-5"
+[23:58:00.013] D [  geom  ] <AnodePlane:crm5> log name: "geom/AnodePlane:crm5"
+[23:58:00.014] D [  gen   ] <DepoTransform:ductor5> log name: "gen/DepoTransform:ductor5"
+[23:58:00.014] D [  gen   ] <Reframer:reframer5> log name: "gen/Reframer:reframer5"
+[23:58:00.014] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> log name: "gen/EmpiricalNoiseModel:empericalnoisecrm5"
+[23:58:00.014] D [  gen   ] <IncoherentAddNoise:addnoiseempericalnoisecrm5> log name: "gen/IncoherentAddNoise:addnoiseempericalnoisecrm5"
+[23:58:00.014] D [  gen   ] <Digitizer:digitizer5> log name: "gen/Digitizer:digitizer5"
+[23:58:00.014] D [sigproc ] <OmnibusSigProc:crm5sigproc5> log name: "sigproc/OmnibusSigProc:crm5sigproc5"
+[23:58:00.014] D [  tbb   ] <TbbFlow:> log name: "tbb/TbbFlow:"
+[23:58:00.015] D [  main  ] configuring component: "TrackDepos":""
+[23:58:00.015] D [  gen   ] <TrackDepos:> add_track(0 us, ((200 -500 50) -> (200 -500 200))cm, -5000)
+[23:58:00.015] D [  gen   ] <TrackDepos:> depos: 1500 over 1500mm
+[23:58:00.015] D [  gen   ] <TrackDepos:> add_track(0 us, ((200 -550 50) -> (200 -550 200))cm, -5000)
+[23:58:00.017] D [  gen   ] <TrackDepos:> depos: 3000 over 1500mm
+[23:58:00.017] D [  main  ] configuring component: "Random":""
+[23:58:00.017] D [  main  ] configuring component: "Drifter":""
+[23:58:00.017] D [  gen   ] <Drifter:> time offset: 0 ms, drift speed: 1.60563 mm/us
+[23:58:00.017] D [  main  ] configuring component: "DepoBagger":"bagger"
+[23:58:00.017] D [  main  ] configuring component: "DepoSetFanout":"sn_mag_fout_0_0"
+[23:58:00.017] D [  main  ] configuring component: "DepoSetFanout":"sn_mag_fout_1_0"
+[23:58:00.017] D [  main  ] configuring component: "DepoSetFanout":"sn_mag_fout_1_1"
+[23:58:00.017] D [  main  ] configuring component: "DepoSetFanout":"sn_mag_fout_1_2"
+[23:58:00.017] D [  main  ] configuring component: "DepoSetFanout":"sn_mag_fout_1_3"
+[23:58:00.017] D [  main  ] configuring component: "FrameFanin":"sn_mag_fin_1_0"
+[23:58:00.017] D [  main  ] configuring component: "FrameFanin":"sn_mag_fin_1_1"
+[23:58:00.018] D [  main  ] configuring component: "FrameFanin":"sn_mag_fin_1_2"
+[23:58:00.018] D [  main  ] configuring component: "FrameFanin":"sn_mag_fin_1_3"
+[23:58:00.018] D [  main  ] configuring component: "FrameFanin":"sn_mag_fin_0_0"
+[23:58:00.018] D [  main  ] configuring component: "DepoSetFilter":"ds-filter-switch-0"
+[23:58:00.018] D [  main  ] configuring component: "WireSchemaFile":""
+[23:58:00.019] I [  wct   ] loading compressed json file: /data1/users/yuhw/larsoft855/share/wirecell/data/dunevd10kt_3view_30deg_v5_refactored_1x8x6ref.json.bz2
+[23:58:02.223] D [  main  ] configuring component: "AnodePlane":"crm0"
+[23:58:02.223] D [  geom  ] <AnodePlane:crm0> X planes: "cathode"@ -3.25m, "response"@3.0608m, "anode"@3.25m
+[23:58:02.224] D [  geom  ] <AnodePlane:crm0> face:0, plane:0, origin:(3060.8 -4215.5 751.001) mm
+[23:58:02.224] D [  geom  ] <AnodePlane:crm0> face:0, plane:1, origin:(3060.8 -4215.5 750.998) mm
+[23:58:02.225] D [  geom  ] <AnodePlane:crm0> face:0, plane:2, origin:(3060.8 -4215.5 751.4) mm
+[23:58:02.225] D [  geom  ] <AnodePlane:crm0> face:0 with 3 planes and sensvol: [(-3250 -5055 6.8) --> (3250 -3376 1496)]
+[23:58:02.225] D [  geom  ] <AnodePlane:crm0> X planes: "cathode"@ -3.25m, "response"@3.0608m, "anode"@3.25m
+[23:58:02.226] D [  geom  ] <AnodePlane:crm0> face:1, plane:0, origin:(3060.8 -5894.5 750.998) mm
+[23:58:02.227] D [  geom  ] <AnodePlane:crm0> face:1, plane:1, origin:(3060.8 -5894.5 751.001) mm
+[23:58:02.227] D [  geom  ] <AnodePlane:crm0> face:1, plane:2, origin:(3060.8 -5894.5 751.4) mm
+[23:58:02.227] D [  geom  ] <AnodePlane:crm0> face:1 with 3 planes and sensvol: [(-3250 -6734 6.8) --> (3250 -5055 1496)]
+[23:58:02.228] D [  main  ] configuring component: "FftwDFT":""
+[23:58:02.228] D [  main  ] configuring component: "FieldResponse":"field0"
+[23:58:02.228] I [  wct   ] loading compressed json file: /data1/users/yuhw/larsoft855/share/wirecell/data/dunevd-resp-isoc3views-18d92.json.bz2
+[23:58:02.787] D [  main  ] configuring component: "ColdElecResponse":""
+[23:58:02.787] D [  main  ] configuring component: "RCResponse":""
+[23:58:02.787] D [  main  ] configuring component: "ResponseSys":""
+[23:58:02.787] D [  main  ] configuring component: "PlaneImpactResponse":"PIRfield0plane0"
+[23:58:02.787] D [  gen   ] <PlaneImpactResponse:PIRfield0plane0> short response ColdElecResponse has different number of samples (8625) than expected (400)
+[23:58:02.787] D [  gen   ] <PlaneImpactResponse:PIRfield0plane0> long response RCResponse has different number of samples (8625) than expected (8960)
+[23:58:02.788] D [  gen   ] <PlaneImpactResponse:PIRfield0plane0> long response RCResponse has different number of samples (8625) than expected (8960)
+[23:58:02.796] D [  main  ] configuring component: "PlaneImpactResponse":"PIRfield0plane1"
+[23:58:02.796] D [  gen   ] <PlaneImpactResponse:PIRfield0plane1> short response ColdElecResponse has different number of samples (8625) than expected (400)
+[23:58:02.796] D [  gen   ] <PlaneImpactResponse:PIRfield0plane1> long response RCResponse has different number of samples (8625) than expected (8960)
+[23:58:02.796] D [  gen   ] <PlaneImpactResponse:PIRfield0plane1> long response RCResponse has different number of samples (8625) than expected (8960)
+[23:58:02.804] D [  main  ] configuring component: "PlaneImpactResponse":"PIRfield0plane2"
+[23:58:02.804] D [  gen   ] <PlaneImpactResponse:PIRfield0plane2> short response ColdElecResponse has different number of samples (8625) than expected (400)
+[23:58:02.804] D [  gen   ] <PlaneImpactResponse:PIRfield0plane2> long response RCResponse has different number of samples (8625) than expected (8960)
+[23:58:02.804] D [  gen   ] <PlaneImpactResponse:PIRfield0plane2> long response RCResponse has different number of samples (8625) than expected (8960)
+[23:58:02.812] D [  main  ] configuring component: "DepoTransform":"ductor0"
+[23:58:02.812] D [  main  ] configuring component: "Reframer":"reframer0"
+[23:58:02.812] D [  gen   ] <Reframer:reframer0> using anode: "AnodePlane:crm0"
+[23:58:02.812] D [  main  ] configuring component: "EmpiricalNoiseModel":"empericalnoisecrm0"
+[23:58:02.812] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> using anode AnodePlane:crm0, chanstat 
+[23:58:02.812] I [  wct   ] loading compressed json file: /data1/users/yuhw/larsoft855/share/wirecell/data/dunevd10kt-1x6x6-3view-noise-spectra-v1.json.bz2
+[23:58:02.824] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:02.824] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:02.824] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:02.824] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:02.825] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:02.825] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:02.825] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:02.825] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:02.825] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:02.826] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:02.826] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:02.826] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:02.826] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:02.826] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:02.826] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:02.827] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:02.827] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:02.827] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:02.827] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:02.828] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:02.828] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:02.828] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:02.828] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:02.828] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:02.828] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:02.829] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:02.829] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:02.829] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:02.829] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:02.829] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:02.830] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:02.830] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:02.830] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:02.830] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:02.830] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:02.831] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:02.831] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:02.831] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:02.831] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:02.831] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:02.832] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:02.832] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:02.832] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:02.832] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:02.832] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:02.833] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:02.833] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:02.833] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:02.833] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:02.833] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:02.833] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:02.834] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:02.834] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:02.834] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:02.834] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:02.835] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:02.835] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:02.835] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:02.835] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:02.835] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:02.835] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:02.836] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:02.836] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:02.836] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:02.836] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:02.836] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:02.837] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:02.837] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:02.837] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:02.837] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:02.837] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:02.838] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:02.838] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:02.838] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:02.838] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:02.838] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:02.838] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:02.839] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:02.839] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:02.839] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:02.839] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:02.840] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:02.840] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:02.840] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:02.840] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:02.840] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:02.840] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:02.841] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:02.841] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:02.841] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:02.841] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:02.841] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:02.842] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:02.842] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:02.842] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:02.842] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:02.842] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:02.843] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:02.843] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:02.843] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:02.843] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:02.843] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm0> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:02.844] D [  main  ] configuring component: "AddNoise":"addnoiseempericalnoisecrm0"
+[23:58:02.844] D [  gen   ] <IncoherentAddNoise:addnoiseempericalnoisecrm0> using noise model: "EmpiricalNoiseModel:empericalnoisecrm0"
+[23:58:02.844] D [  main  ] configuring component: "Digitizer":"digitizer0"
+[23:58:02.844] D [  gen   ] <Digitizer:digitizer0> tag="orig0", resolution=12 bits, maxvalue=4096 counts, gain=1, fullscale=[0,2000] mV, baselines=[900,900,200] mV round=0
+[23:58:02.844] D [  main  ] configuring component: "LfFilter":"ROI_tight_lf"
+[23:58:02.844] D [  main  ] configuring component: "LfFilter":"ROI_tighter_lf"
+[23:58:02.844] D [  main  ] configuring component: "LfFilter":"ROI_loose_lf"
+[23:58:02.844] D [  main  ] configuring component: "HfFilter":"Gaus_tight"
+[23:58:02.844] D [  main  ] configuring component: "HfFilter":"Gaus_wide"
+[23:58:02.844] D [  main  ] configuring component: "HfFilter":"Wiener_tight_U"
+[23:58:02.844] D [  main  ] configuring component: "HfFilter":"Wiener_tight_V"
+[23:58:02.844] D [  main  ] configuring component: "HfFilter":"Wiener_tight_W"
+[23:58:02.844] D [  main  ] configuring component: "HfFilter":"Wiener_wide_U"
+[23:58:02.844] D [  main  ] configuring component: "HfFilter":"Wiener_wide_V"
+[23:58:02.844] D [  main  ] configuring component: "HfFilter":"Wiener_wide_W"
+[23:58:02.844] D [  main  ] configuring component: "HfFilter":"Wire_ind"
+[23:58:02.844] D [  main  ] configuring component: "HfFilter":"Wire_col"
+[23:58:02.845] D [  main  ] configuring component: "OmnibusSigProc":"crm0sigproc0"
+[23:58:02.846] D [sigproc ] <OmnibusSigProc:crm0sigproc0> config: internal channel map for tags: gauss:"gauss0", wiener:"wiener0", frame:"sigproc"
+	pind0 aid0 fid0 pid0 cid286 -> cid475, cind0 -> cind189, (n=190)
+	pind1 aid0 fid0 pid1 cid1427 -> cid1239, cind0 -> cind188, (n=189)
+	pind2 aid0 fid0 pid2 cid2196 -> cid2487, cind0 -> cind291, (n=292)
+	pind0 aid0 fid1 pid0 cid0 -> cid285, cind0 -> cind285, (n=476)
+	pind1 aid0 fid1 pid1 cid1238 -> cid952, cind0 -> cind286, (n=476)
+	pind2 aid0 fid1 pid2 cid1904 -> cid2195, cind0 -> cind291, (n=584)
+
+[23:58:02.847] D [  main  ] configuring component: "MagnifySink":"magdecon0"
+[23:58:03.769] D [  main  ] configuring component: "DepoSetFilter":"ds-filter-switch-1"
+[23:58:03.770] D [  main  ] configuring component: "AnodePlane":"crm1"
+[23:58:03.770] D [  geom  ] <AnodePlane:crm1> X planes: "cathode"@ -3.25m, "response"@3.0608m, "anode"@3.25m
+[23:58:03.771] D [  geom  ] <AnodePlane:crm1> face:0, plane:0, origin:(3060.8 -845.499 751.001) mm
+[23:58:03.772] D [  geom  ] <AnodePlane:crm1> face:0, plane:1, origin:(3060.8 -845.498 750.999) mm
+[23:58:03.773] D [  geom  ] <AnodePlane:crm1> face:0, plane:2, origin:(3060.8 -845.5 751.4) mm
+[23:58:03.773] D [  geom  ] <AnodePlane:crm1> face:0 with 3 planes and sensvol: [(-3250 -1685 6.8) --> (3250 -6 1496)]
+[23:58:03.773] D [  geom  ] <AnodePlane:crm1> X planes: "cathode"@ -3.25m, "response"@3.0608m, "anode"@3.25m
+[23:58:03.774] D [  geom  ] <AnodePlane:crm1> face:1, plane:0, origin:(3060.8 -2524.5 750.998) mm
+[23:58:03.775] D [  geom  ] <AnodePlane:crm1> face:1, plane:1, origin:(3060.8 -2524.5 751.001) mm
+[23:58:03.776] D [  geom  ] <AnodePlane:crm1> face:1, plane:2, origin:(3060.8 -2524.5 751.4) mm
+[23:58:03.776] D [  geom  ] <AnodePlane:crm1> face:1 with 3 planes and sensvol: [(-3250 -3364 6.8) --> (3250 -1685 1496)]
+[23:58:03.776] D [  main  ] configuring component: "DepoTransform":"ductor1"
+[23:58:03.776] D [  main  ] configuring component: "Reframer":"reframer1"
+[23:58:03.776] D [  gen   ] <Reframer:reframer1> using anode: "AnodePlane:crm1"
+[23:58:03.776] D [  main  ] configuring component: "EmpiricalNoiseModel":"empericalnoisecrm1"
+[23:58:03.776] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> using anode AnodePlane:crm1, chanstat 
+[23:58:03.776] I [  wct   ] loading compressed json file: /data1/users/yuhw/larsoft855/share/wirecell/data/dunevd10kt-1x6x6-3view-noise-spectra-v1.json.bz2
+[23:58:03.792] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.792] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:03.792] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.793] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:03.793] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.793] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:03.793] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.794] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:03.794] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.794] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:03.795] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.795] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:03.795] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.795] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:03.796] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.796] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:03.796] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.796] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:03.797] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.797] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:03.797] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.798] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:03.798] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.798] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:03.798] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.799] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:03.799] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.799] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:03.799] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.800] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:03.800] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.800] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:03.800] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.801] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:03.801] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.801] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:03.801] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.802] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:03.802] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.802] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:03.802] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.803] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:03.803] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.803] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:03.804] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.804] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:03.804] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.804] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:03.805] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.805] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:03.805] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.805] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:03.806] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.806] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:03.806] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.807] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:03.807] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.807] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:03.807] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.808] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:03.808] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.808] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:03.808] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.809] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:03.809] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.809] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:03.809] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.810] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:03.810] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.810] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:03.810] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.811] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:03.811] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.811] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:03.812] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.812] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:03.812] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.812] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:03.813] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.813] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:03.813] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.814] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:03.814] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.814] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:03.814] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.815] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:03.815] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.815] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:03.815] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.816] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:03.816] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.816] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:03.816] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.817] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:03.817] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.817] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:03.817] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.818] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:03.818] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.818] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:03.818] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.819] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm1> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:03.820] D [  main  ] configuring component: "AddNoise":"addnoiseempericalnoisecrm1"
+[23:58:03.820] D [  gen   ] <IncoherentAddNoise:addnoiseempericalnoisecrm1> using noise model: "EmpiricalNoiseModel:empericalnoisecrm1"
+[23:58:03.820] D [  main  ] configuring component: "Digitizer":"digitizer1"
+[23:58:03.820] D [  gen   ] <Digitizer:digitizer1> tag="orig1", resolution=12 bits, maxvalue=4096 counts, gain=1, fullscale=[0,2000] mV, baselines=[900,900,200] mV round=0
+[23:58:03.820] D [  main  ] configuring component: "OmnibusSigProc":"crm1sigproc1"
+[23:58:03.822] D [sigproc ] <OmnibusSigProc:crm1sigproc1> config: internal channel map for tags: gauss:"gauss1", wiener:"wiener1", frame:"sigproc"
+	pind0 aid1 fid0 pid0 cid3358 -> cid3547, cind0 -> cind189, (n=190)
+	pind1 aid1 fid0 pid1 cid4499 -> cid4311, cind0 -> cind188, (n=189)
+	pind2 aid1 fid0 pid2 cid5268 -> cid5559, cind0 -> cind291, (n=292)
+	pind0 aid1 fid1 pid0 cid3072 -> cid3357, cind0 -> cind285, (n=476)
+	pind1 aid1 fid1 pid1 cid4310 -> cid4024, cind0 -> cind286, (n=476)
+	pind2 aid1 fid1 pid2 cid4976 -> cid5267, cind0 -> cind291, (n=584)
+
+[23:58:03.822] D [  main  ] configuring component: "MagnifySink":"magdecon1"
+[23:58:03.828] D [  main  ] configuring component: "DepoSetFilter":"ds-filter-switch-4"
+[23:58:03.828] D [  main  ] configuring component: "AnodePlane":"crm4"
+[23:58:03.828] D [  geom  ] <AnodePlane:crm4> X planes: "cathode"@ -3.25m, "response"@3.0608m, "anode"@3.25m
+[23:58:03.829] D [  geom  ] <AnodePlane:crm4> face:0, plane:0, origin:(3060.8 -4215.5 2242) mm
+[23:58:03.830] D [  geom  ] <AnodePlane:crm4> face:0, plane:1, origin:(3060.8 -4215.5 2242) mm
+[23:58:03.831] D [  geom  ] <AnodePlane:crm4> face:0, plane:2, origin:(3060.8 -4215.5 2241.6) mm
+[23:58:03.831] D [  geom  ] <AnodePlane:crm4> face:0 with 3 planes and sensvol: [(-3250 -5055 1497) --> (3250 -3376 2986.2)]
+[23:58:03.831] D [  geom  ] <AnodePlane:crm4> X planes: "cathode"@ -3.25m, "response"@3.0608m, "anode"@3.25m
+[23:58:03.832] D [  geom  ] <AnodePlane:crm4> face:1, plane:0, origin:(3060.8 -5894.5 2242) mm
+[23:58:03.833] D [  geom  ] <AnodePlane:crm4> face:1, plane:1, origin:(3060.8 -5894.5 2242) mm
+[23:58:03.834] D [  geom  ] <AnodePlane:crm4> face:1, plane:2, origin:(3060.8 -5894.5 2241.6) mm
+[23:58:03.834] D [  geom  ] <AnodePlane:crm4> face:1 with 3 planes and sensvol: [(-3250 -6734 1497) --> (3250 -5055 2986.2)]
+[23:58:03.834] D [  main  ] configuring component: "DepoTransform":"ductor4"
+[23:58:03.834] D [  main  ] configuring component: "Reframer":"reframer4"
+[23:58:03.834] D [  gen   ] <Reframer:reframer4> using anode: "AnodePlane:crm4"
+[23:58:03.834] D [  main  ] configuring component: "EmpiricalNoiseModel":"empericalnoisecrm4"
+[23:58:03.834] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> using anode AnodePlane:crm4, chanstat 
+[23:58:03.835] I [  wct   ] loading compressed json file: /data1/users/yuhw/larsoft855/share/wirecell/data/dunevd10kt-1x6x6-3view-noise-spectra-v1.json.bz2
+[23:58:03.847] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.847] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:03.847] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.848] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:03.848] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.848] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:03.848] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.849] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:03.849] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.849] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:03.849] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.849] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:03.849] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.850] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:03.850] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.850] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:03.850] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.850] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:03.851] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.851] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:03.851] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.851] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:03.851] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.852] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:03.852] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.852] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:03.852] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.852] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:03.852] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.853] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:03.853] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.853] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:03.853] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.853] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:03.854] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.854] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:03.854] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.854] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:03.854] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.855] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:03.855] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.855] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:03.855] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.855] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:03.855] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.856] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:03.856] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.856] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:03.856] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.856] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:03.857] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.857] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:03.857] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.857] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:03.857] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.858] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:03.858] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.858] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:03.858] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.858] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:03.858] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.859] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:03.859] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.859] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:03.859] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.859] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:03.860] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.860] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:03.860] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.860] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:03.860] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.861] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:03.861] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.861] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:03.861] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.861] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:03.861] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.862] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:03.862] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.862] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:03.862] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.862] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:03.863] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.863] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:03.863] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.863] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:03.863] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.864] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:03.864] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.864] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:03.864] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.864] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:03.864] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.865] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:03.865] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.865] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:03.865] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.865] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:03.866] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.866] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:03.866] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.866] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm4> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:03.867] D [  main  ] configuring component: "AddNoise":"addnoiseempericalnoisecrm4"
+[23:58:03.867] D [  gen   ] <IncoherentAddNoise:addnoiseempericalnoisecrm4> using noise model: "EmpiricalNoiseModel:empericalnoisecrm4"
+[23:58:03.867] D [  main  ] configuring component: "Digitizer":"digitizer4"
+[23:58:03.867] D [  gen   ] <Digitizer:digitizer4> tag="orig4", resolution=12 bits, maxvalue=4096 counts, gain=1, fullscale=[0,2000] mV, baselines=[900,900,200] mV round=0
+[23:58:03.867] D [  main  ] configuring component: "OmnibusSigProc":"crm4sigproc4"
+[23:58:03.868] D [sigproc ] <OmnibusSigProc:crm4sigproc4> config: internal channel map for tags: gauss:"gauss4", wiener:"wiener4", frame:"sigproc"
+	pind0 aid4 fid0 pid0 cid763 -> cid951, cind0 -> cind188, (n=189)
+	pind1 aid4 fid0 pid1 cid1903 -> cid1714, cind0 -> cind189, (n=190)
+	pind2 aid4 fid0 pid2 cid2780 -> cid3071, cind0 -> cind291, (n=292)
+	pind0 aid4 fid1 pid0 cid476 -> cid762, cind0 -> cind286, (n=476)
+	pind1 aid4 fid1 pid1 cid1713 -> cid1428, cind0 -> cind285, (n=476)
+	pind2 aid4 fid1 pid2 cid2488 -> cid2779, cind0 -> cind291, (n=584)
+
+[23:58:03.869] D [  main  ] configuring component: "MagnifySink":"magdecon4"
+[23:58:03.875] D [  main  ] configuring component: "DepoSetFilter":"ds-filter-switch-5"
+[23:58:03.875] D [  main  ] configuring component: "AnodePlane":"crm5"
+[23:58:03.875] D [  geom  ] <AnodePlane:crm5> X planes: "cathode"@ -3.25m, "response"@3.0608m, "anode"@3.25m
+[23:58:03.875] D [  geom  ] <AnodePlane:crm5> face:0, plane:0, origin:(3060.8 -845.498 2242) mm
+[23:58:03.876] D [  geom  ] <AnodePlane:crm5> face:0, plane:1, origin:(3060.8 -845.499 2242) mm
+[23:58:03.877] D [  geom  ] <AnodePlane:crm5> face:0, plane:2, origin:(3060.8 -845.5 2241.6) mm
+[23:58:03.877] D [  geom  ] <AnodePlane:crm5> face:0 with 3 planes and sensvol: [(-3250 -1685 1497) --> (3250 -6 2986.2)]
+[23:58:03.877] D [  geom  ] <AnodePlane:crm5> X planes: "cathode"@ -3.25m, "response"@3.0608m, "anode"@3.25m
+[23:58:03.877] D [  geom  ] <AnodePlane:crm5> face:1, plane:0, origin:(3060.8 -2524.5 2242) mm
+[23:58:03.878] D [  geom  ] <AnodePlane:crm5> face:1, plane:1, origin:(3060.8 -2524.5 2242) mm
+[23:58:03.879] D [  geom  ] <AnodePlane:crm5> face:1, plane:2, origin:(3060.8 -2524.5 2241.6) mm
+[23:58:03.879] D [  geom  ] <AnodePlane:crm5> face:1 with 3 planes and sensvol: [(-3250 -3364 1497) --> (3250 -1685 2986.2)]
+[23:58:03.879] D [  main  ] configuring component: "DepoTransform":"ductor5"
+[23:58:03.879] D [  main  ] configuring component: "Reframer":"reframer5"
+[23:58:03.879] D [  gen   ] <Reframer:reframer5> using anode: "AnodePlane:crm5"
+[23:58:03.879] D [  main  ] configuring component: "EmpiricalNoiseModel":"empericalnoisecrm5"
+[23:58:03.879] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> using anode AnodePlane:crm5, chanstat 
+[23:58:03.879] I [  wct   ] loading compressed json file: /data1/users/yuhw/larsoft855/share/wirecell/data/dunevd10kt-1x6x6-3view-noise-spectra-v1.json.bz2
+[23:58:03.890] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.891] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:03.891] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.891] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:03.891] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.891] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:03.891] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.892] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:03.892] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.892] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:03.892] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.892] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:03.893] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.893] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:03.893] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.893] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:03.893] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.894] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:03.894] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.894] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:03.894] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.894] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:03.894] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.895] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:03.895] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.895] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:03.895] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.895] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:03.896] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.896] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:03.896] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.896] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:03.896] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.897] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> nwanted=8500 plane=0 ntold=9375 ngot=8960 ninput=101
+[23:58:03.897] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.897] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:03.897] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.897] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:03.898] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.898] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:03.898] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.898] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:03.898] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.899] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:03.899] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.899] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:03.899] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.899] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:03.899] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.900] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:03.900] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.900] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:03.900] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.900] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:03.901] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.901] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:03.901] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.901] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:03.901] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.902] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:03.902] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.902] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:03.902] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.902] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:03.903] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.903] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:03.903] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.903] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> nwanted=8500 plane=1 ntold=9375 ngot=8960 ninput=101
+[23:58:03.903] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.904] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:03.904] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.904] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:03.904] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.904] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:03.904] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.905] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:03.905] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.905] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:03.905] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.906] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:03.906] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.906] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:03.906] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.906] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:03.906] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.907] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:03.907] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.907] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:03.907] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.907] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:03.908] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.908] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:03.908] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.908] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:03.908] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.909] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:03.909] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.909] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:03.909] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.909] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:03.910] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> m_nsamples=8500 fft_length=8960 m_period=500 spec: nsamples=9375 period=500
+[23:58:03.910] D [  gen   ] <EmpiricalNoiseModel:empericalnoisecrm5> nwanted=8500 plane=2 ntold=9375 ngot=8960 ninput=101
+[23:58:03.910] D [  main  ] configuring component: "AddNoise":"addnoiseempericalnoisecrm5"
+[23:58:03.910] D [  gen   ] <IncoherentAddNoise:addnoiseempericalnoisecrm5> using noise model: "EmpiricalNoiseModel:empericalnoisecrm5"
+[23:58:03.910] D [  main  ] configuring component: "Digitizer":"digitizer5"
+[23:58:03.910] D [  gen   ] <Digitizer:digitizer5> tag="orig5", resolution=12 bits, maxvalue=4096 counts, gain=1, fullscale=[0,2000] mV, baselines=[900,900,200] mV round=0
+[23:58:03.910] D [  main  ] configuring component: "OmnibusSigProc":"crm5sigproc5"
+[23:58:03.912] D [sigproc ] <OmnibusSigProc:crm5sigproc5> config: internal channel map for tags: gauss:"gauss5", wiener:"wiener5", frame:"sigproc"
+	pind0 aid5 fid0 pid0 cid3835 -> cid4023, cind0 -> cind188, (n=189)
+	pind1 aid5 fid0 pid1 cid4975 -> cid4786, cind0 -> cind189, (n=190)
+	pind2 aid5 fid0 pid2 cid5852 -> cid6143, cind0 -> cind291, (n=292)
+	pind0 aid5 fid1 pid0 cid3548 -> cid3834, cind0 -> cind286, (n=476)
+	pind1 aid5 fid1 pid1 cid4785 -> cid4500, cind0 -> cind285, (n=476)
+	pind2 aid5 fid1 pid2 cid5560 -> cid5851, cind0 -> cind291, (n=584)
+
+[23:58:03.912] D [  main  ] configuring component: "MagnifySink":"magdecon5"
+[23:58:03.918] D [  main  ] configuring component: "DumpFrames":""
+[23:58:03.918] D [  main  ] configuring component: "TbbFlow":""
+[23:58:03.927] D [  tbb   ] <TbbFlow:> connecting graph with 44 edges
+[23:58:03.928] D [  tbb   ] <TbbFlow:> connect: OmnibusSigProc:crm1sigproc1 ( 0 -> 0 ) MagnifySink:magdecon1
+[23:58:03.928] D [  tbb   ] <TbbFlow:> connect: Reframer:reframer1 ( 0 -> 0 ) AddNoise:addnoiseempericalnoisecrm1
+[23:58:03.928] D [  tbb   ] <TbbFlow:> connect: AddNoise:addnoiseempericalnoisecrm1 ( 0 -> 0 ) Digitizer:digitizer1
+[23:58:03.928] D [  tbb   ] <TbbFlow:> connect: AddNoise:addnoiseempericalnoisecrm4 ( 0 -> 0 ) Digitizer:digitizer4
+[23:58:03.928] D [  tbb   ] <TbbFlow:> connect: FrameFanin:sn_mag_fin_1_0 ( 0 -> 0 ) FrameFanin:sn_mag_fin_0_0
+[23:58:03.928] D [  tbb   ] <TbbFlow:> connect: MagnifySink:magdecon1 ( 0 -> 0 ) FrameFanin:sn_mag_fin_1_1
+[23:58:03.928] D [  tbb   ] <TbbFlow:> connect: FrameFanin:sn_mag_fin_1_1 ( 0 -> 1 ) FrameFanin:sn_mag_fin_0_0
+[23:58:03.928] D [  tbb   ] <TbbFlow:> connect: DepoTransform:ductor0 ( 0 -> 0 ) Reframer:reframer0
+[23:58:03.928] D [  tbb   ] <TbbFlow:> connect: Digitizer:digitizer0 ( 0 -> 0 ) OmnibusSigProc:crm0sigproc0
+[23:58:03.928] D [  tbb   ] <TbbFlow:> connect: OmnibusSigProc:crm0sigproc0 ( 0 -> 0 ) MagnifySink:magdecon0
+[23:58:03.928] D [  tbb   ] <TbbFlow:> connect: MagnifySink:magdecon4 ( 0 -> 0 ) FrameFanin:sn_mag_fin_1_2
+[23:58:03.928] D [  tbb   ] <TbbFlow:> connect: FrameFanin:sn_mag_fin_1_2 ( 0 -> 2 ) FrameFanin:sn_mag_fin_0_0
+[23:58:03.928] D [  tbb   ] <TbbFlow:> connect: MagnifySink:magdecon5 ( 0 -> 0 ) FrameFanin:sn_mag_fin_1_3
+[23:58:03.928] D [  tbb   ] <TbbFlow:> connect: FrameFanin:sn_mag_fin_1_3 ( 0 -> 3 ) FrameFanin:sn_mag_fin_0_0
+[23:58:03.928] D [  tbb   ] <TbbFlow:> connect: AddNoise:addnoiseempericalnoisecrm0 ( 0 -> 0 ) Digitizer:digitizer0
+[23:58:03.928] D [  tbb   ] <TbbFlow:> connect: DepoTransform:ductor1 ( 0 -> 0 ) Reframer:reframer1
+[23:58:03.928] D [  tbb   ] <TbbFlow:> connect: Digitizer:digitizer1 ( 0 -> 0 ) OmnibusSigProc:crm1sigproc1
+[23:58:03.928] D [  tbb   ] <TbbFlow:> connect: Reframer:reframer0 ( 0 -> 0 ) AddNoise:addnoiseempericalnoisecrm0
+[23:58:03.928] D [  tbb   ] <TbbFlow:> connect: DepoTransform:ductor4 ( 0 -> 0 ) Reframer:reframer4
+[23:58:03.928] D [  tbb   ] <TbbFlow:> connect: Digitizer:digitizer4 ( 0 -> 0 ) OmnibusSigProc:crm4sigproc4
+[23:58:03.928] D [  tbb   ] <TbbFlow:> connect: OmnibusSigProc:crm4sigproc4 ( 0 -> 0 ) MagnifySink:magdecon4
+[23:58:03.928] D [  tbb   ] <TbbFlow:> connect: Reframer:reframer4 ( 0 -> 0 ) AddNoise:addnoiseempericalnoisecrm4
+[23:58:03.928] D [  tbb   ] <TbbFlow:> connect: AddNoise:addnoiseempericalnoisecrm5 ( 0 -> 0 ) Digitizer:digitizer5
+[23:58:03.928] D [  tbb   ] <TbbFlow:> connect: OmnibusSigProc:crm5sigproc5 ( 0 -> 0 ) MagnifySink:magdecon5
+[23:58:03.928] D [  tbb   ] <TbbFlow:> connect: Reframer:reframer5 ( 0 -> 0 ) AddNoise:addnoiseempericalnoisecrm5
+[23:58:03.928] D [  tbb   ] <TbbFlow:> connect: DepoTransform:ductor5 ( 0 -> 0 ) Reframer:reframer5
+[23:58:03.928] D [  tbb   ] <TbbFlow:> connect: Digitizer:digitizer5 ( 0 -> 0 ) OmnibusSigProc:crm5sigproc5
+[23:58:03.928] D [  tbb   ] <TbbFlow:> connect: DepoSetFilter:ds-filter-switch-5 ( 0 -> 0 ) DepoTransform:ductor5
+[23:58:03.928] D [  tbb   ] <TbbFlow:> connect: MagnifySink:magdecon0 ( 0 -> 0 ) FrameFanin:sn_mag_fin_1_0
+[23:58:03.928] D [  tbb   ] <TbbFlow:> connect: DepoSetFanout:sn_mag_fout_1_0 ( 0 -> 0 ) DepoSetFilter:ds-filter-switch-0
+[23:58:03.928] D [  tbb   ] <TbbFlow:> connect: DepoSetFilter:ds-filter-switch-0 ( 0 -> 0 ) DepoTransform:ductor0
+[23:58:03.928] D [  tbb   ] <TbbFlow:> connect: DepoSetFanout:sn_mag_fout_1_3 ( 0 -> 0 ) DepoSetFilter:ds-filter-switch-5
+[23:58:03.928] D [  tbb   ] <TbbFlow:> connect: DepoSetFanout:sn_mag_fout_1_1 ( 0 -> 0 ) DepoSetFilter:ds-filter-switch-1
+[23:58:03.928] D [  tbb   ] <TbbFlow:> connect: DepoSetFilter:ds-filter-switch-1 ( 0 -> 0 ) DepoTransform:ductor1
+[23:58:03.928] D [  tbb   ] <TbbFlow:> connect: DepoSetFanout:sn_mag_fout_0_0 ( 0 -> 0 ) DepoSetFanout:sn_mag_fout_1_0
+[23:58:03.928] D [  tbb   ] <TbbFlow:> connect: DepoSetFanout:sn_mag_fout_0_0 ( 1 -> 0 ) DepoSetFanout:sn_mag_fout_1_1
+[23:58:03.928] D [  tbb   ] <TbbFlow:> connect: DepoSetFanout:sn_mag_fout_0_0 ( 2 -> 0 ) DepoSetFanout:sn_mag_fout_1_2
+[23:58:03.928] D [  tbb   ] <TbbFlow:> connect: DepoSetFanout:sn_mag_fout_0_0 ( 3 -> 0 ) DepoSetFanout:sn_mag_fout_1_3
+[23:58:03.928] D [  tbb   ] <TbbFlow:> connect: DepoSetFanout:sn_mag_fout_1_2 ( 0 -> 0 ) DepoSetFilter:ds-filter-switch-4
+[23:58:03.928] D [  tbb   ] <TbbFlow:> connect: DepoSetFilter:ds-filter-switch-4 ( 0 -> 0 ) DepoTransform:ductor4
+[23:58:03.928] D [  tbb   ] <TbbFlow:> connect: DepoBagger:bagger ( 0 -> 0 ) DepoSetFanout:sn_mag_fout_0_0
+[23:58:03.928] D [  tbb   ] <TbbFlow:> connect: Drifter: ( 0 -> 0 ) DepoBagger:bagger
+[23:58:03.928] D [  tbb   ] <TbbFlow:> connect: FrameFanin:sn_mag_fin_0_0 ( 0 -> 0 ) DumpFrames:
+[23:58:03.928] D [  tbb   ] <TbbFlow:> connect: TrackDepos: ( 0 -> 0 ) Drifter:
+[23:58:03.929] D [  main  ] executing 1 apps, thread limit 0:
+[23:58:03.929] D [  main  ] executing 1 apps, thread limit 0:
+[23:58:03.929] D [  main  ] executing app: "TbbFlow"
+[23:58:03.929] D [  tbb   ] <TbbFlow:> TbbFlow: run: 
+[23:58:03.934] D [  gen   ] <TrackDepos:> EOS at call 3000
+[23:58:03.936] D [  gen   ] <Drifter:> xregion: anode: 3250 mm, response: 3060.8 mm, cathode: -3250 mm, flushing 3000
+[23:58:03.940] D [  gen   ] <DepoBagger:bagger> send bag #0 with 3000 depos followed by EOS
+[23:58:03.940] D [  glue  ] <DepoSetFanout:sn_mag_fout_0_0> call=0 fanout depo set 0 with 3000
+[23:58:03.940] D [  glue  ] <DepoSetFanout:sn_mag_fout_0_0> EOS at call=1
+[23:58:03.940] D [  glue  ] <DepoSetFanout:sn_mag_fout_1_0> call=0 fanout depo set 0 with 3000
+[23:58:03.940] D [  glue  ] <DepoSetFanout:sn_mag_fout_1_3> call=0 fanout depo set 0 with 3000
+[23:58:03.940] D [  glue  ] <DepoSetFanout:sn_mag_fout_1_1> call=0 fanout depo set 0 with 3000
+[23:58:03.940] D [  glue  ] <DepoSetFanout:sn_mag_fout_1_2> call=0 fanout depo set 0 with 3000
+[23:58:03.941] D [  glue  ] <DepoSetFanout:sn_mag_fout_1_1> EOS at call=1
+[23:58:03.941] D [  glue  ] <DepoSetFanout:sn_mag_fout_1_3> EOS at call=1
+[23:58:03.941] D [  gen   ] <DepoSetFilter:ds-filter-switch-0> call=0 Number of Depos for a give APA=0
+[23:58:03.941] D [  gen   ] <DepoSetFilter:ds-filter-switch-5> call=0 Number of Depos for a give APA=0
+[23:58:03.940] D [  glue  ] <DepoSetFanout:sn_mag_fout_1_0> EOS at call=1
+[23:58:03.941] D [  glue  ] <DepoSetFanout:sn_mag_fout_1_2> EOS at call=1
+[23:58:03.941] D [  gen   ] <DepoSetFilter:ds-filter-switch-0> DepoSetFilter fail with no input on call = 1
+[23:58:03.941] D [  gen   ] <DepoSetFilter:ds-filter-switch-4> call=0 Number of Depos for a give APA=0
+[23:58:03.941] D [  gen   ] <DepoSetFilter:ds-filter-switch-5> DepoSetFilter fail with no input on call = 1
+[23:58:03.941] D [  gen   ] <DepoSetFilter:ds-filter-switch-1> call=0 Number of Depos for a give APA=0
+[23:58:03.941] D [  gen   ] <DepoSetFilter:ds-filter-switch-4> DepoSetFilter fail with no input on call = 1
+[23:58:03.941] D [  gen   ] <DepoSetFilter:ds-filter-switch-1> DepoSetFilter fail with no input on call = 1
+[23:58:04.150] D [  gen   ] <DepoTransform:ductor4> call=0 count=100 ndepos_in=0 ndepos_used=0
+[23:58:04.150] D [  gen   ] <DepoTransform:ductor4> output: frame: ident=100 time=-62280.8 tick=500 with 0 traces.  frame tags:[ ] 0 tagged trace sets:[ ] cmm:[ ]
+[23:58:04.150] D [  gen   ] <DepoTransform:ductor4> EOS at call=1
+[23:58:04.151] D [  gen   ] <DepoTransform:ductor1> call=0 count=100 ndepos_in=0 ndepos_used=0
+[23:58:04.151] D [  gen   ] <DepoTransform:ductor1> output: frame: ident=100 time=-62280.8 tick=500 with 0 traces.  frame tags:[ ] 0 tagged trace sets:[ ] cmm:[ ]
+[23:58:04.151] D [  gen   ] <DepoTransform:ductor1> EOS at call=1
+[23:58:04.153] D [  gen   ] <DepoTransform:ductor5> call=0 count=100 ndepos_in=0 ndepos_used=0
+[23:58:04.153] D [  gen   ] <DepoTransform:ductor5> output: frame: ident=100 time=-62280.8 tick=500 with 0 traces.  frame tags:[ ] 0 tagged trace sets:[ ] cmm:[ ]
+[23:58:04.153] D [  gen   ] <DepoTransform:ductor5> EOS at call=1
+[23:58:04.153] D [  gen   ] <DepoTransform:ductor0> call=0 count=100 ndepos_in=0 ndepos_used=0
+[23:58:04.153] D [  gen   ] <DepoTransform:ductor0> output: frame: ident=100 time=-62280.8 tick=500 with 0 traces.  frame tags:[ ] 0 tagged trace sets:[ ] cmm:[ ]
+[23:58:04.153] D [  gen   ] <DepoTransform:ductor0> EOS at call=1
+[23:58:04.197] D [  gen   ] <Reframer:reframer4> input : frame: ident=100 time=-62280.8 tick=500 with 0 traces.  frame tags:[ ] 0 tagged trace sets:[ ] cmm:[ ]
+[23:58:04.197] D [  gen   ] <Reframer:reframer4> output: frame: ident=100 time=219.151 tick=500 with 1536 traces.  frame tags:[ ] 0 tagged trace sets:[ ] cmm:[ ]
+[23:58:04.197] D [  gen   ] <Reframer:reframer4> EOS at call=1
+[23:58:04.197] W [  gen   ] <IncoherentAddNoise:addnoiseempericalnoisecrm4> model EmpiricalNoiseModel:empericalnoisecrm4 produced 8960 samples instead of expected 8500, future warnings muted
+[23:58:04.198] D [  gen   ] <Reframer:reframer1> input : frame: ident=100 time=-62280.8 tick=500 with 0 traces.  frame tags:[ ] 0 tagged trace sets:[ ] cmm:[ ]
+[23:58:04.198] D [  gen   ] <Reframer:reframer1> output: frame: ident=100 time=219.151 tick=500 with 1536 traces.  frame tags:[ ] 0 tagged trace sets:[ ] cmm:[ ]
+[23:58:04.198] D [  gen   ] <Reframer:reframer1> EOS at call=1
+[23:58:04.199] D [  gen   ] <Reframer:reframer5> input : frame: ident=100 time=-62280.8 tick=500 with 0 traces.  frame tags:[ ] 0 tagged trace sets:[ ] cmm:[ ]
+[23:58:04.199] D [  gen   ] <Reframer:reframer5> output: frame: ident=100 time=219.151 tick=500 with 1536 traces.  frame tags:[ ] 0 tagged trace sets:[ ] cmm:[ ]
+[23:58:04.199] D [  gen   ] <Reframer:reframer5> EOS at call=1
+[23:58:04.200] D [  gen   ] <Reframer:reframer0> input : frame: ident=100 time=-62280.8 tick=500 with 0 traces.  frame tags:[ ] 0 tagged trace sets:[ ] cmm:[ ]
+[23:58:04.200] D [  gen   ] <Reframer:reframer0> output: frame: ident=100 time=219.151 tick=500 with 1536 traces.  frame tags:[ ] 0 tagged trace sets:[ ] cmm:[ ]
+[23:58:04.200] D [  gen   ] <Reframer:reframer0> EOS at call=1
+[23:58:04.474] D [  gen   ] <IncoherentAddNoise:addnoiseempericalnoisecrm4> call=0 frame=100 1536 traces
+[23:58:04.474] D [  gen   ] <IncoherentAddNoise:addnoiseempericalnoisecrm4> input : frame: ident=100 time=219.151 tick=500 with 1536 traces.  frame tags:[ ] 0 tagged trace sets:[ ] cmm:[ ]
+[23:58:04.474] D [  gen   ] <IncoherentAddNoise:addnoiseempericalnoisecrm4> output: frame: ident=100 time=219.151 tick=500 with 1536 traces.  frame tags:[ ] 0 tagged trace sets:[ ] cmm:[ ]
+[23:58:04.474] D [  gen   ] <IncoherentAddNoise:addnoiseempericalnoisecrm4> EOS at call=1
+[23:58:04.476] D [  gen   ] <IncoherentAddNoise:addnoiseempericalnoisecrm5> call=0 frame=100 1536 traces
+[23:58:04.476] D [  gen   ] <IncoherentAddNoise:addnoiseempericalnoisecrm5> input : frame: ident=100 time=219.151 tick=500 with 1536 traces.  frame tags:[ ] 0 tagged trace sets:[ ] cmm:[ ]
+[23:58:04.476] D [  gen   ] <IncoherentAddNoise:addnoiseempericalnoisecrm5> output: frame: ident=100 time=219.151 tick=500 with 1536 traces.  frame tags:[ ] 0 tagged trace sets:[ ] cmm:[ ]
+[23:58:04.476] D [  gen   ] <IncoherentAddNoise:addnoiseempericalnoisecrm5> EOS at call=1
+[23:58:04.477] D [  gen   ] <IncoherentAddNoise:addnoiseempericalnoisecrm1> call=0 frame=100 1536 traces
+[23:58:04.477] D [  gen   ] <IncoherentAddNoise:addnoiseempericalnoisecrm1> input : frame: ident=100 time=219.151 tick=500 with 1536 traces.  frame tags:[ ] 0 tagged trace sets:[ ] cmm:[ ]
+[23:58:04.477] D [  gen   ] <IncoherentAddNoise:addnoiseempericalnoisecrm1> output: frame: ident=100 time=219.151 tick=500 with 1536 traces.  frame tags:[ ] 0 tagged trace sets:[ ] cmm:[ ]
+[23:58:04.477] D [  gen   ] <IncoherentAddNoise:addnoiseempericalnoisecrm1> EOS at call=1
+[23:58:04.478] D [  gen   ] <IncoherentAddNoise:addnoiseempericalnoisecrm0> call=0 frame=100 1536 traces
+[23:58:04.478] D [  gen   ] <IncoherentAddNoise:addnoiseempericalnoisecrm0> input : frame: ident=100 time=219.151 tick=500 with 1536 traces.  frame tags:[ ] 0 tagged trace sets:[ ] cmm:[ ]
+[23:58:04.478] D [  gen   ] <IncoherentAddNoise:addnoiseempericalnoisecrm0> output: frame: ident=100 time=219.151 tick=500 with 1536 traces.  frame tags:[ ] 0 tagged trace sets:[ ] cmm:[ ]
+[23:58:04.478] D [  gen   ] <IncoherentAddNoise:addnoiseempericalnoisecrm0> EOS at call=1
+[23:58:05.020] D [  gen   ] <Digitizer:digitizer4> call=0 traces=1536 frame=100 totadc=16938152097 outtag="orig4"
+[23:58:05.021] D [  gen   ] <Digitizer:digitizer4> input : frame: ident=100 time=219.151 tick=500 with 1536 traces.  frame tags:[ ] 0 tagged trace sets:[ ] cmm:[ ]
+[23:58:05.021] D [  gen   ] <Digitizer:digitizer4> output: frame: ident=100 time=219.151 tick=500 with 1536 traces.  frame tags:[ "orig4" ] 0 tagged trace sets:[ ] cmm:[ ]
+[23:58:05.022] D [  gen   ] <Digitizer:digitizer4> see EOS at call=1
+[23:58:05.023] D [sigproc ] <OmnibusSigProc:crm4sigproc4> call=0 input frame: frame: ident=100 time=219.151 tick=500 with 1536 traces.  frame tags:[ "orig4" ] 0 tagged trace sets:[ ] cmm:[ ]
+[23:58:05.023] D [sigproc ] <OmnibusSigProc:crm4sigproc4> call=0 init nticks=8500 tbinmin=0 tbinmax=8500
+[23:58:05.026] D [  gen   ] <Digitizer:digitizer5> call=0 traces=1536 frame=100 totadc=16938143766 outtag="orig5"
+[23:58:05.026] D [  gen   ] <Digitizer:digitizer5> input : frame: ident=100 time=219.151 tick=500 with 1536 traces.  frame tags:[ ] 0 tagged trace sets:[ ] cmm:[ ]
+[23:58:05.026] D [  gen   ] <Digitizer:digitizer5> output: frame: ident=100 time=219.151 tick=500 with 1536 traces.  frame tags:[ "orig5" ] 0 tagged trace sets:[ ] cmm:[ ]
+[23:58:05.028] D [  gen   ] <Digitizer:digitizer5> see EOS at call=1
+[23:58:05.028] D [sigproc ] <OmnibusSigProc:crm5sigproc5> call=0 input frame: frame: ident=100 time=219.151 tick=500 with 1536 traces.  frame tags:[ "orig5" ] 0 tagged trace sets:[ ] cmm:[ ]
+[23:58:05.028] D [sigproc ] <OmnibusSigProc:crm5sigproc5> call=0 init nticks=8500 tbinmin=0 tbinmax=8500
+[23:58:05.044] D [sigproc ] <OmnibusSigProc:crm4sigproc4> call=0 load plane index: 0, ntraces=1536, input bad regions: 0
+[23:58:05.044] D [  gen   ] <Digitizer:digitizer1> call=0 traces=1536 frame=100 totadc=16938144592 outtag="orig1"
+[23:58:05.044] D [  gen   ] <Digitizer:digitizer1> input : frame: ident=100 time=219.151 tick=500 with 1536 traces.  frame tags:[ ] 0 tagged trace sets:[ ] cmm:[ ]
+[23:58:05.044] D [  gen   ] <Digitizer:digitizer1> output: frame: ident=100 time=219.151 tick=500 with 1536 traces.  frame tags:[ "orig1" ] 0 tagged trace sets:[ ] cmm:[ ]
+[23:58:05.046] D [  gen   ] <Digitizer:digitizer1> see EOS at call=1
+[23:58:05.046] D [sigproc ] <OmnibusSigProc:crm5sigproc5> call=0 load plane index: 0, ntraces=1536, input bad regions: 0
+[23:58:05.047] D [sigproc ] <OmnibusSigProc:crm1sigproc1> call=0 input frame: frame: ident=100 time=219.151 tick=500 with 1536 traces.  frame tags:[ "orig1" ] 0 tagged trace sets:[ ] cmm:[ ]
+[23:58:05.047] D [sigproc ] <OmnibusSigProc:crm1sigproc1> call=0 init nticks=8500 tbinmin=0 tbinmax=8500
+[23:58:05.065] D [sigproc ] <OmnibusSigProc:crm1sigproc1> call=0 load plane index: 0, ntraces=1536, input bad regions: 0
+[23:58:05.066] D [  gen   ] <Digitizer:digitizer0> call=0 traces=1536 frame=100 totadc=16938160081 outtag="orig0"
+[23:58:05.066] D [  gen   ] <Digitizer:digitizer0> input : frame: ident=100 time=219.151 tick=500 with 1536 traces.  frame tags:[ ] 0 tagged trace sets:[ ] cmm:[ ]
+[23:58:05.066] D [  gen   ] <Digitizer:digitizer0> output: frame: ident=100 time=219.151 tick=500 with 1536 traces.  frame tags:[ "orig0" ] 0 tagged trace sets:[ ] cmm:[ ]
+[23:58:05.068] D [  gen   ] <Digitizer:digitizer0> see EOS at call=1
+[23:58:05.068] D [sigproc ] <OmnibusSigProc:crm0sigproc0> call=0 input frame: frame: ident=100 time=219.151 tick=500 with 1536 traces.  frame tags:[ "orig0" ] 0 tagged trace sets:[ ] cmm:[ ]
+[23:58:05.068] D [sigproc ] <OmnibusSigProc:crm0sigproc0> call=0 init nticks=8500 tbinmin=0 tbinmax=8500
+[23:58:05.087] D [sigproc ] <OmnibusSigProc:crm0sigproc0> call=0 load plane index: 0, ntraces=1536, input bad regions: 0
+[23:58:07.298] D [sigproc ] <OmnibusSigProc:crm4sigproc4> call=0 load plane index: 1, ntraces=1536, input bad regions: 0
+[23:58:07.301] D [sigproc ] <OmnibusSigProc:crm5sigproc5> call=0 load plane index: 1, ntraces=1536, input bad regions: 0
+[23:58:07.356] D [sigproc ] <OmnibusSigProc:crm1sigproc1> call=0 load plane index: 1, ntraces=1536, input bad regions: 0
+[23:58:07.358] D [sigproc ] <OmnibusSigProc:crm0sigproc0> call=0 load plane index: 1, ntraces=1536, input bad regions: 0
+[23:58:09.487] D [sigproc ] <OmnibusSigProc:crm4sigproc4> call=0 load plane index: 2, ntraces=1536, input bad regions: 0
+[23:58:09.493] D [sigproc ] <OmnibusSigProc:crm5sigproc5> call=0 load plane index: 2, ntraces=1536, input bad regions: 0
+[23:58:09.559] D [sigproc ] <OmnibusSigProc:crm0sigproc0> call=0 load plane index: 2, ntraces=1536, input bad regions: 0
+[23:58:09.596] D [sigproc ] <OmnibusSigProc:crm1sigproc1> call=0 load plane index: 2, ntraces=1536, input bad regions: 0
+[23:58:11.769] D [sigproc ] <OmnibusSigProc:crm4sigproc4> call=0 save plane index: 0, Qtot=0 Qloss=0, 476 indices spanning [0,475] "wiener"
+[23:58:11.776] D [sigproc ] <OmnibusSigProc:crm5sigproc5> call=0 save plane index: 0, Qtot=0 Qloss=0, 476 indices spanning [0,475] "wiener"
+[23:58:11.848] D [sigproc ] <OmnibusSigProc:crm0sigproc0> call=0 save plane index: 0, Qtot=0 Qloss=0, 476 indices spanning [0,475] "wiener"
+[23:58:11.887] D [sigproc ] <OmnibusSigProc:crm1sigproc1> call=0 save plane index: 0, Qtot=0 Qloss=0, 476 indices spanning [0,475] "wiener"
+[23:58:12.004] D [sigproc ] <OmnibusSigProc:crm4sigproc4> call=0 save plane index: 0, Qtot=0 Qloss=0, 476 indices spanning [476,951] "gauss"
+[23:58:12.009] D [sigproc ] <OmnibusSigProc:crm5sigproc5> call=0 save plane index: 0, Qtot=0 Qloss=0, 476 indices spanning [476,951] "gauss"
+[23:58:12.086] D [sigproc ] <OmnibusSigProc:crm0sigproc0> call=0 save plane index: 0, Qtot=0 Qloss=0, 476 indices spanning [476,951] "gauss"
+[23:58:12.127] D [sigproc ] <OmnibusSigProc:crm1sigproc1> call=0 save plane index: 0, Qtot=0 Qloss=0, 476 indices spanning [476,951] "gauss"
+[23:58:12.311] D [sigproc ] <OmnibusSigProc:crm4sigproc4> call=0 save plane index: 1, Qtot=0 Qloss=0, 476 indices spanning [952,1427] "wiener"
+[23:58:12.315] D [sigproc ] <OmnibusSigProc:crm5sigproc5> call=0 save plane index: 1, Qtot=0 Qloss=0, 476 indices spanning [952,1427] "wiener"
+[23:58:12.398] D [sigproc ] <OmnibusSigProc:crm0sigproc0> call=0 save plane index: 1, Qtot=0 Qloss=0, 476 indices spanning [952,1427] "wiener"
+[23:58:12.442] D [sigproc ] <OmnibusSigProc:crm1sigproc1> call=0 save plane index: 1, Qtot=0 Qloss=0, 476 indices spanning [952,1427] "wiener"
+[23:58:12.548] D [sigproc ] <OmnibusSigProc:crm4sigproc4> call=0 save plane index: 1, Qtot=0 Qloss=0, 476 indices spanning [1428,1903] "gauss"
+[23:58:12.553] D [sigproc ] <OmnibusSigProc:crm5sigproc5> call=0 save plane index: 1, Qtot=0 Qloss=0, 476 indices spanning [1428,1903] "gauss"
+[23:58:12.639] D [sigproc ] <OmnibusSigProc:crm0sigproc0> call=0 save plane index: 1, Qtot=0 Qloss=0, 476 indices spanning [1428,1903] "gauss"
+[23:58:12.683] D [sigproc ] <OmnibusSigProc:crm1sigproc1> call=0 save plane index: 1, Qtot=0 Qloss=0, 476 indices spanning [1428,1903] "gauss"
+[23:58:13.006] D [sigproc ] <OmnibusSigProc:crm4sigproc4> call=0 save plane index: 2, Qtot=0 Qloss=0, 584 indices spanning [1904,2487] "wiener"
+[23:58:13.015] D [sigproc ] <OmnibusSigProc:crm5sigproc5> call=0 save plane index: 2, Qtot=0 Qloss=0, 584 indices spanning [1904,2487] "wiener"
+[23:58:13.107] D [sigproc ] <OmnibusSigProc:crm0sigproc0> call=0 save plane index: 2, Qtot=0 Qloss=0, 584 indices spanning [1904,2487] "wiener"
+[23:58:13.159] D [sigproc ] <OmnibusSigProc:crm1sigproc1> call=0 save plane index: 2, Qtot=0 Qloss=0, 584 indices spanning [1904,2487] "wiener"
+[23:58:13.439] D [sigproc ] <OmnibusSigProc:crm4sigproc4> call=0 save plane index: 2, Qtot=0 Qloss=0, 584 indices spanning [2488,3071] "gauss"
+[23:58:13.441] D [sigproc ] <OmnibusSigProc:crm4sigproc4> call=0 produce 3072 traces: 1536 wiener4, 0 decon_charge4, 1536 gauss4, frame tag: sigproc
+[23:58:13.441] D [sigproc ] <OmnibusSigProc:crm4sigproc4> call=0 output frame: frame: ident=100 time=219.151 tick=500 with 3072 traces.  frame tags:[ "sigproc" ] 2 tagged trace sets:[ "gauss4":1536 [0] "wiener4":1536 [1536] ] cmm:[ ]
+[23:58:13.442] D [sigproc ] <OmnibusSigProc:crm4sigproc4> EOS at call=1 anode=4
+[23:58:13.442] D [magnify ] MagnifySink: opening for output: mag-sim-sp.root with mode UPDATE
+[23:58:13.449] D [magnify ] MagnifySink: tag: "wiener4" with 1536 traces
+[23:58:13.449] D [magnify ] MagnifySink: cbin:476[475.5,951.5] tbin:8500[0,8500]
+[23:58:13.452] D [sigproc ] <OmnibusSigProc:crm5sigproc5> call=0 save plane index: 2, Qtot=0 Qloss=0, 584 indices spanning [2488,3071] "gauss"
+[23:58:13.453] D [sigproc ] <OmnibusSigProc:crm5sigproc5> call=0 produce 3072 traces: 1536 wiener5, 0 decon_charge5, 1536 gauss5, frame tag: sigproc
+[23:58:13.453] D [sigproc ] <OmnibusSigProc:crm5sigproc5> call=0 output frame: frame: ident=100 time=219.151 tick=500 with 3072 traces.  frame tags:[ "sigproc" ] 2 tagged trace sets:[ "gauss5":1536 [0] "wiener5":1536 [1536] ] cmm:[ ]
+[23:58:13.454] D [sigproc ] <OmnibusSigProc:crm5sigproc5> EOS at call=1 anode=5
+[23:58:13.455] D [magnify ] MagnifySink: opening for output: mag-sim-sp.root with mode UPDATE
+[23:58:13.455] D [magnify ] MagnifySink: tag: "wiener5" with 1536 traces
+[23:58:13.455] D [magnify ] MagnifySink: cbin:476[3547.5,4023.5] tbin:8500[0,8500]
+[23:58:13.536] D [magnify ] MagnifySink: cbin:476[1427.5,1903.5] tbin:8500[0,8500]
+[23:58:13.540] D [sigproc ] <OmnibusSigProc:crm0sigproc0> call=0 save plane index: 2, Qtot=0 Qloss=0, 584 indices spanning [2488,3071] "gauss"
+[23:58:13.541] D [sigproc ] <OmnibusSigProc:crm0sigproc0> call=0 produce 3072 traces: 1536 wiener0, 0 decon_charge0, 1536 gauss0, frame tag: sigproc
+[23:58:13.541] D [sigproc ] <OmnibusSigProc:crm0sigproc0> call=0 output frame: frame: ident=100 time=219.151 tick=500 with 3072 traces.  frame tags:[ "sigproc" ] 2 tagged trace sets:[ "gauss0":1536 [0] "wiener0":1536 [1536] ] cmm:[ ]
+[23:58:13.542] D [sigproc ] <OmnibusSigProc:crm0sigproc0> EOS at call=1 anode=0
+[23:58:13.543] D [magnify ] MagnifySink: opening for output: mag-sim-sp.root with mode UPDATE
+[23:58:13.543] D [magnify ] MagnifySink: tag: "wiener0" with 1536 traces
+[23:58:13.543] D [magnify ] MagnifySink: cbin:476[4499.5,4975.5] tbin:8500[0,8500]
+[23:58:13.543] D [magnify ] MagnifySink: cbin:476[-0.5,475.5] tbin:8500[0,8500]
+[23:58:13.601] D [sigproc ] <OmnibusSigProc:crm1sigproc1> call=0 save plane index: 2, Qtot=0 Qloss=0, 584 indices spanning [2488,3071] "gauss"
+[23:58:13.620] D [sigproc ] <OmnibusSigProc:crm1sigproc1> call=0 produce 3072 traces: 1536 wiener1, 0 decon_charge1, 1536 gauss1, frame tag: sigproc
+[23:58:13.620] D [sigproc ] <OmnibusSigProc:crm1sigproc1> call=0 output frame: frame: ident=100 time=219.151 tick=500 with 3072 traces.  frame tags:[ "sigproc" ] 2 tagged trace sets:[ "gauss1":1536 [0] "wiener1":1536 [1536] ] cmm:[ ]
+[23:58:13.621] D [sigproc ] <OmnibusSigProc:crm1sigproc1> EOS at call=1 anode=1
+[23:58:13.621] D [magnify ] MagnifySink: opening for output: mag-sim-sp.root with mode UPDATE
+[23:58:13.622] D [magnify ] MagnifySink: tag: "wiener1" with 1536 traces
+[23:58:13.622] D [magnify ] MagnifySink: cbin:476[3071.5,3547.5] tbin:8500[0,8500]
+[23:58:13.629] D [magnify ] MagnifySink: cbin:584[2487.5,3071.5] tbin:8500[0,8500]
+[23:58:13.632] D [magnify ] MagnifySink: cbin:476[951.5,1427.5] tbin:8500[0,8500]
+[23:58:13.635] D [magnify ] MagnifySink: cbin:584[5559.5,6143.5] tbin:8500[0,8500]
+[23:58:13.710] D [magnify ] MagnifySink: cbin:476[4023.5,4499.5] tbin:8500[0,8500]
+[23:58:13.722] D [magnify ] MagnifySink: cbin:584[1903.5,2487.5] tbin:8500[0,8500]
+[23:58:13.734] D [magnify ] MagnifySink: tag: "gauss4" with 1536 traces
+[23:58:13.735] D [magnify ] MagnifySink: cbin:476[475.5,951.5] tbin:8500[0,8500]
+[23:58:13.742] D [magnify ] MagnifySink: tag: "gauss5" with 1536 traces
+[23:58:13.742] D [magnify ] MagnifySink: cbin:476[3547.5,4023.5] tbin:8500[0,8500]
+[23:58:13.801] D [magnify ] MagnifySink: cbin:584[4975.5,5559.5] tbin:8500[0,8500]
+[23:58:13.824] D [magnify ] MagnifySink: cbin:476[1427.5,1903.5] tbin:8500[0,8500]
+[23:58:13.829] D [magnify ] MagnifySink: tag: "gauss0" with 1536 traces
+[23:58:13.829] D [magnify ] MagnifySink: cbin:476[-0.5,475.5] tbin:8500[0,8500]
+[23:58:13.832] D [magnify ] MagnifySink: cbin:476[4499.5,4975.5] tbin:8500[0,8500]
+[23:58:13.911] D [magnify ] MagnifySink: tag: "gauss1" with 1536 traces
+[23:58:13.911] D [magnify ] MagnifySink: cbin:476[3071.5,3547.5] tbin:8500[0,8500]
+[23:58:13.916] D [magnify ] MagnifySink: cbin:584[2487.5,3071.5] tbin:8500[0,8500]
+[23:58:13.925] D [magnify ] MagnifySink: cbin:476[951.5,1427.5] tbin:8500[0,8500]
+[23:58:13.926] D [magnify ] MagnifySink: cbin:584[5559.5,6143.5] tbin:8500[0,8500]
+[23:58:14.002] D [magnify ] MagnifySink: cbin:476[4023.5,4499.5] tbin:8500[0,8500]
+[23:58:14.018] D [magnify ] MagnifySink: cbin:584[1903.5,2487.5] tbin:8500[0,8500]
+Error in <TClass::RegisterStreamerInfo>: Register StreamerInfo for TH2F on non-empty slot (4).
+[23:58:14.115] D [magnify ] MagnifySink: cbin:584[4975.5,5559.5] tbin:8500[0,8500]
+[23:58:14.363] D [magnify ] MagnifySink: closing output file mag-sim-sp.root, wrote 459668 bytes
+[23:58:14.368] D [magnify ] MagnifySink: EOS
+[23:58:14.368] D [  glue  ] <FrameFanin:sn_mag_fin_1_3> call=0 input 0: frame: ident=100 time=219.151 tick=500 with 3072 traces.  frame tags:[ "sigproc" ] 2 tagged trace sets:[ "gauss5":1536 [0] "wiener5":1536 [1536] ] cmm:[ ] output: frame: ident=100 time=219.151 tick=500 with 3072 traces.  frame tags:[ "framefanin" ] 2 tagged trace sets:[ "gauss5":1536 [0] "wiener5":1536 [1536] ] cmm:[ ]
+[23:58:14.368] D [  glue  ] <FrameFanin:sn_mag_fin_1_3> EOS at call=1 with 1
+[23:58:14.402] D [magnify ] MagnifySink: closing output file mag-sim-sp.root, wrote 459642 bytes
+[23:58:14.407] D [magnify ] MagnifySink: EOS
+[23:58:14.407] D [  glue  ] <FrameFanin:sn_mag_fin_1_2> call=0 input 0: frame: ident=100 time=219.151 tick=500 with 3072 traces.  frame tags:[ "sigproc" ] 2 tagged trace sets:[ "gauss4":1536 [0] "wiener4":1536 [1536] ] cmm:[ ] output: frame: ident=100 time=219.151 tick=500 with 3072 traces.  frame tags:[ "framefanin" ] 2 tagged trace sets:[ "gauss4":1536 [0] "wiener4":1536 [1536] ] cmm:[ ]
+[23:58:14.407] D [  glue  ] <FrameFanin:sn_mag_fin_1_2> EOS at call=1 with 1
+[23:58:14.423] D [magnify ] MagnifySink: closing output file mag-sim-sp.root, wrote 459657 bytes
+[23:58:14.428] D [magnify ] MagnifySink: EOS
+[23:58:14.428] D [  glue  ] <FrameFanin:sn_mag_fin_1_0> call=0 input 0: frame: ident=100 time=219.151 tick=500 with 3072 traces.  frame tags:[ "sigproc" ] 2 tagged trace sets:[ "gauss0":1536 [0] "wiener0":1536 [1536] ] cmm:[ ] output: frame: ident=100 time=219.151 tick=500 with 3072 traces.  frame tags:[ "framefanin" ] 2 tagged trace sets:[ "gauss0":1536 [0] "wiener0":1536 [1536] ] cmm:[ ]
+[23:58:14.428] D [  glue  ] <FrameFanin:sn_mag_fin_1_0> EOS at call=1 with 1
+[23:58:14.492] D [magnify ] MagnifySink: closing output file mag-sim-sp.root, wrote 459671 bytes
+[23:58:14.500] D [magnify ] MagnifySink: EOS
+[23:58:14.500] D [  glue  ] <FrameFanin:sn_mag_fin_1_1> call=0 input 0: frame: ident=100 time=219.151 tick=500 with 3072 traces.  frame tags:[ "sigproc" ] 2 tagged trace sets:[ "gauss1":1536 [0] "wiener1":1536 [1536] ] cmm:[ ] output: frame: ident=100 time=219.151 tick=500 with 3072 traces.  frame tags:[ "framefanin" ] 2 tagged trace sets:[ "gauss1":1536 [0] "wiener1":1536 [1536] ] cmm:[ ]
+[23:58:14.501] D [  glue  ] <FrameFanin:sn_mag_fin_1_1> EOS at call=1 with 1
+[23:58:14.502] D [  glue  ] <FrameFanin:sn_mag_fin_0_0> call=0 input 0: frame: ident=100 time=219.151 tick=500 with 3072 traces.  frame tags:[ "framefanin" ] 2 tagged trace sets:[ "gauss0":1536 [0] "wiener0":1536 [1536] ] cmm:[ ] input 1: frame: ident=100 time=219.151 tick=500 with 3072 traces.  frame tags:[ "framefanin" ] 2 tagged trace sets:[ "gauss1":1536 [0] "wiener1":1536 [1536] ] cmm:[ ] input 2: frame: ident=100 time=219.151 tick=500 with 3072 traces.  frame tags:[ "framefanin" ] 2 tagged trace sets:[ "gauss4":1536 [0] "wiener4":1536 [1536] ] cmm:[ ] input 3: frame: ident=100 time=219.151 tick=500 with 3072 traces.  frame tags:[ "framefanin" ] 2 tagged trace sets:[ "gauss5":1536 [0] "wiener5":1536 [1536] ] cmm:[ ] output: frame: ident=100 time=219.151 tick=500 with 12288 traces.  frame tags:[ "framefanin" ] 8 tagged trace sets:[ "gauss0":1536 [0] "gauss1":1536 [0] "gauss4":1536 [0] "gauss5":1536 [0] "wiener0":1536 [1536] "wiener1":1536 [1536] "wiener4":1536 [1536] "wiener5":1536 [1536] ] cmm:[ ]
+[23:58:14.502] D [  glue  ] <FrameFanin:sn_mag_fin_0_0> EOS at call=1 with 4
+[23:58:14.502] D [  glue  ] sink frame: #100 @0.000219151 with 12288 traces, frame tags:[framefanin], trace tags:[gauss0, gauss1, gauss4, gauss5, wiener0, wiener1, wiener4, wiener5]
+[23:58:14.503] D [  glue  ] frame sink sees EOS
+[23:58:14.525] D [  tbb   ] WireCell::IFrameFilter "crm1sigproc1" calls=2 time=8574 mean=4287 max=8574 [ms]
+[23:58:14.525] D [  tbb   ] WireCell::IFrameFilter "crm0sigproc0" calls=2 time=8473 mean=4236.5 max=8473 [ms]
+[23:58:14.525] D [  tbb   ] WireCell::IFrameFilter "crm5sigproc5" calls=2 time=8425 mean=4212.5 max=8425 [ms]
+[23:58:14.525] D [  tbb   ] WireCell::IFrameFilter "crm4sigproc4" calls=2 time=8418 mean=4209 max=8418 [ms]
+[23:58:14.525] D [  tbb   ] WireCell::IFrameFilter "(unknown)" calls=2 time=964 mean=482 max=964 [ms]
+[23:58:14.525] D [  tbb   ] WireCell::IFrameFilter "(unknown)" calls=2 time=913 mean=456.5 max=913 [ms]
+[23:58:14.525] D [  tbb   ] WireCell::IFrameFilter "(unknown)" calls=2 time=885 mean=442.5 max=885 [ms]
+[23:58:14.525] D [  tbb   ] WireCell::IFrameFilter "(unknown)" calls=2 time=878 mean=439 max=878 [ms]
+[23:58:14.525] D [  tbb   ] WireCell::IFrameFilter "digitizer0" calls=2 time=589 mean=294.5 max=589 [ms]
+[23:58:14.525] D [  tbb   ] WireCell::IFrameFilter "digitizer1" calls=2 time=569 mean=284.5 max=569 [ms]
+[23:58:14.525] D [  tbb   ] WireCell::IFrameFilter "digitizer5" calls=2 time=551 mean=275.5 max=551 [ms]
+[23:58:14.525] D [  tbb   ] WireCell::IFrameFilter "digitizer4" calls=2 time=548 mean=274 max=548 [ms]
+[23:58:14.525] D [  tbb   ] WireCell::IFrameFilter "addnoiseempericalnoisecrm1" calls=2 time=278 mean=139 max=278 [ms]
+[23:58:14.525] D [  tbb   ] WireCell::IFrameFilter "addnoiseempericalnoisecrm0" calls=2 time=278 mean=139 max=278 [ms]
+[23:58:14.525] D [  tbb   ] WireCell::IFrameFilter "addnoiseempericalnoisecrm5" calls=2 time=277 mean=138.5 max=277 [ms]
+[23:58:14.525] D [  tbb   ] WireCell::IFrameFilter "addnoiseempericalnoisecrm4" calls=2 time=277 mean=138.5 max=277 [ms]
+[23:58:14.525] D [  tbb   ] WireCell::IDepoFramer "ductor0" calls=2 time=212 mean=106 max=212 [ms]
+[23:58:14.525] D [  tbb   ] WireCell::IDepoFramer "ductor5" calls=2 time=212 mean=106 max=212 [ms]
+[23:58:14.525] D [  tbb   ] WireCell::IDepoFramer "ductor1" calls=2 time=209 mean=104.5 max=209 [ms]
+[23:58:14.525] D [  tbb   ] WireCell::IDepoFramer "ductor4" calls=2 time=209 mean=104.5 max=209 [ms]
+[23:58:14.525] D [  tbb   ] WireCell::IFrameFilter "reframer1" calls=2 time=47 mean=23.5 max=47 [ms]
+[23:58:14.525] D [  tbb   ] WireCell::IFrameFilter "reframer0" calls=2 time=46 mean=23 max=46 [ms]
+[23:58:14.525] D [  tbb   ] WireCell::IFrameFilter "reframer4" calls=2 time=46 mean=23 max=46 [ms]
+[23:58:14.525] D [  tbb   ] WireCell::IFrameFilter "reframer5" calls=2 time=46 mean=23 max=46 [ms]
+[23:58:14.525] D [  tbb   ] WireCell::IDrifter "" calls=3001 time=5 mean=0.00166611 max=0 [ms]
+[23:58:14.525] D [  tbb   ] WireCell::IFrameFanin "(unknown)" calls=2 time=1 mean=0.5 max=1 [ms]
+[23:58:14.525] D [  tbb   ] WireCell::IDepoSource "" calls=3002 time=1 mean=0.000333111 max=0 [ms]
+[23:58:14.525] D [  tbb   ] WireCell::IFrameFanin "(unknown)" calls=2 time=0 mean=0 max=0 [ms]
+[23:58:14.525] D [  tbb   ] WireCell::IDepoCollector "bagger" calls=3001 time=0 mean=0 max=0 [ms]
+[23:58:14.525] D [  tbb   ] WireCell::IFrameFanin "(unknown)" calls=2 time=0 mean=0 max=0 [ms]
+[23:58:14.525] D [  tbb   ] WireCell::IFrameFanin "(unknown)" calls=2 time=0 mean=0 max=0 [ms]
+[23:58:14.525] D [  tbb   ] WireCell::IFrameFanin "(unknown)" calls=2 time=0 mean=0 max=0 [ms]
+[23:58:14.525] D [  tbb   ] WireCell::IDepoSetFilter "ds-filter-switch-4" calls=2 time=0 mean=0 max=0 [ms]
+[23:58:14.525] D [  tbb   ] WireCell::IDepoSetFanout "sn_mag_fout_1_2" calls=2 time=0 mean=0 max=0 [ms]
+[23:58:14.525] D [  tbb   ] WireCell::IDepoSetFilter "ds-filter-switch-1" calls=2 time=0 mean=0 max=0 [ms]
+[23:58:14.525] D [  tbb   ] WireCell::IDepoSetFanout "sn_mag_fout_1_0" calls=2 time=0 mean=0 max=0 [ms]
+[23:58:14.525] D [  tbb   ] WireCell::IDepoSetFilter "ds-filter-switch-5" calls=2 time=0 mean=0 max=0 [ms]
+[23:58:14.525] D [  tbb   ] WireCell::IDepoSetFilter "ds-filter-switch-0" calls=2 time=0 mean=0 max=0 [ms]
+[23:58:14.525] D [  tbb   ] WireCell::IDepoSetFanout "sn_mag_fout_1_3" calls=2 time=0 mean=0 max=0 [ms]
+[23:58:14.525] D [  tbb   ] WireCell::IDepoSetFanout "sn_mag_fout_1_1" calls=2 time=0 mean=0 max=0 [ms]
+[23:58:14.525] D [  tbb   ] WireCell::IFrameSink "(unknown)" calls=2 time=0 mean=0 max=0 [ms]
+[23:58:14.525] D [  tbb   ] WireCell::IDepoSetFanout "sn_mag_fout_0_0" calls=2 time=0 mean=0 max=0 [ms]
