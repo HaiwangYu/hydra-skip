@@ -295,13 +295,14 @@ local bi_manifold =
     else if fcl_params.ncrm == 36
     then f.multifanpipe('DepoSetFanout', multipass, 'FrameFanin', [1,6], [6,6], [1,6], [6,6], 'sn_mag', outtags, tag_rules)
     else if fcl_params.ncrm == 24
-    // then f.multifanpipe('DepoSetFanout', switch_pipes, 'FrameFanin', [1,4], [4,6], [1,4], [4,6], 'sn_mag', outtags, tag_rules)
-    then f.multifanpipe('DepoSetFanout', multipass, 'FrameFanin', [1,4], [4,6], [1,4], [4,6], 'sn_mag', outtags, tag_rules)
+    then f.multifanpipe('DepoSetFanout', switch_pipes, 'FrameFanin', [1,4], [4,6], [1,4], [4,6], 'sn_mag', outtags, tag_rules)
+    // then f.multifanpipe('DepoSetFanout', multipass, 'FrameFanin', [1,4], [4,6], [1,4], [4,6], 'sn_mag', outtags, tag_rules)
     else if fcl_params.ncrm == 48 || fcl_params.process_crm == "partial"
     then f.multifanpipe('DepoSetFanout', multipass, 'FrameFanin', [1,8], [8,6], [1,8], [8,6], 'sn_mag', outtags, tag_rules)
     else if fcl_params.ncrm == 112
     then f.multifanpipe('DepoSetFanout', multipass, 'FrameFanin', [1,8,16], [8,2,7], [1,8,16], [8,2,7], 'sn_mag', outtags, tag_rules)
     else if fcl_params.ncrm == 320
+    // then f.multifanpipe('DepoSetFanout', switch_pipes, 'FrameFanin', [1,2,8,32], [2,4,4,10], [1,2,8,32], [2,4,4,10], 'sn_mag', outtags, tag_rules);
     then f.multifanpipe('DepoSetFanout', multipass, 'FrameFanin', [1,2,8,32], [2,4,4,10], [1,2,8,32], [2,4,4,10], 'sn_mag', outtags, tag_rules);
 
 local retagger = g.pnode({

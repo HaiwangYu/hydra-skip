@@ -3,6 +3,7 @@ jsonnet=/cvmfs/larsoft.opensciencegrid.org/products/gojsonnet/v0_17_0/Linux64bit
 #jsonnet=/home/yuhw/go/jsonnet/bin/jsonnet
 
 cfg=/home/yuhw/wc/larsoft925/src/wct/cfg
+cfg=/exp/dune/app/users/yuhw/wct/cfg
 
 name=$2
 name=${name%.jsonnet}
