@@ -12,7 +12,7 @@ local response_plane = std.extVar('response_plane')*wc.cm;
 //     ncrm: 320,
 //     wires: 'dunevd10kt_3view_30deg_v6_refactored.json.bz2',
 //     use_dnnroi: false,
-//     process_crm: 'test1',
+//     process_crm: 'full',
 // };
 local fcl_params = {
     response_plane: 18.92*wc.cm,
@@ -234,7 +234,7 @@ then f.multifanpipe('DepoSetFanout', switch_pipes, 'FrameFanin', [1,4], [4,1], [
 // then f.multifanout('DepoSetFanout', parallel_pipes, [1,4], [4,1], 'sn_mag', tag_rules)
 else if fcl_params.process_crm == "test2"
 then f.multifanpipe('DepoSetFanout', parallel_pipes, 'FrameFanin', [1,8], [8,1], [1,8], [8,1], 'sn_mag', outtags, tag_rules)
-else f.multifanpipe('DepoSetFanout', parallel_pipes, 'FrameFanin', [1,2,8,32], [2,4,4,10], [1,2,8,32], [2,4,4,10], 'sn_mag', outtags, tag_rules);
+else f.multifanpipe('DepoSetFanout', switch_pipes, 'FrameFanin', [1,2,8,32], [2,4,4,10], [1,2,8,32], [2,4,4,10], 'sn_mag', outtags, tag_rules);
 
 
 // Only one sink ////////////////////////////////////////////////////////////////////////////
