@@ -253,14 +253,49 @@ local tag_rules = {
         + {['threshold%d' % anode.data.ident]: ['threshold%d' % anode.data.ident] for anode in tools.anodes}
         + {['dnnsp%d' % anode.data.ident]: ['dnnsp%d' % anode.data.ident] for anode in tools.anodes},
 };
+
+
+local make_switch_pipe = function(d2f, anode ) {
+    local ds_filter = g.pnode({
+        type: "DepoSetFilter",
+        name: "ds-filter-switch-%d" % anode.data.ident,
+        data: {anode: wc.tn(anode)},
+        }, nin=1, nout=1, uses=[anode]),
+    local dorb = g.pnode({
+        type: "DeposOrBust",
+        name: "dorb-switch-%d" % anode.data.ident,
+        }, nin=1, nout=2),
+    local frame_sync = g.pnode({
+        type: "FrameSync",
+        name: "frame-sync-switch-%d" % anode.data.ident,
+        }, nin=2, nout=1),
+    ret1: g.intern(
+        innodes=[ds_filter],
+        outnodes=[frame_sync],
+        centernodes=[dorb, d2f],
+        edges=
+            [g.edge(ds_filter, dorb, 0, 0),
+            g.edge(dorb, d2f, 0, 0),
+            g.edge(d2f, frame_sync, 0, 0),
+            g.edge(dorb, frame_sync, 1, 1)]),
+    ret2: g.pipeline([ds_filter, d2f]),
+}.ret1;
+
+local switch_pipes = [
+    make_switch_pipe(multipass[n], tools.anodes[n]),
+    for n in std.range(0, std.length(tools.anodes) - 1)
+];
+
 local bi_manifold =
     if fcl_params.process_crm == "test1"
     then f.multifanpipe('DepoSetFanout', multipass, 'FrameFanin', [1,1], [1,1], [1,1], [1,1], 'sn_mag', outtags, tag_rules)
     else if fcl_params.process_crm == "test2"
-    then f.multifanpipe('DepoSetFanout', multipass, 'FrameFanin', [1,4], [4,1], [1,4], [4,1], 'sn_mag', outtags, tag_rules)
+    then f.multifanpipe('DepoSetFanout', switch_pipes, 'FrameFanin', [1,4], [4,1], [1,4], [4,1], 'sn_mag', outtags, tag_rules)
+    // then f.multifanpipe('DepoSetFanout', multipass, 'FrameFanin', [1,4], [4,1], [1,4], [4,1], 'sn_mag', outtags, tag_rules)
     else if fcl_params.ncrm == 36
     then f.multifanpipe('DepoSetFanout', multipass, 'FrameFanin', [1,6], [6,6], [1,6], [6,6], 'sn_mag', outtags, tag_rules)
     else if fcl_params.ncrm == 24
+    // then f.multifanpipe('DepoSetFanout', switch_pipes, 'FrameFanin', [1,4], [4,6], [1,4], [4,6], 'sn_mag', outtags, tag_rules)
     then f.multifanpipe('DepoSetFanout', multipass, 'FrameFanin', [1,4], [4,6], [1,4], [4,6], 'sn_mag', outtags, tag_rules)
     else if fcl_params.ncrm == 48 || fcl_params.process_crm == "partial"
     then f.multifanpipe('DepoSetFanout', multipass, 'FrameFanin', [1,8], [8,6], [1,8], [8,6], 'sn_mag', outtags, tag_rules)
