@@ -15,11 +15,11 @@ void plot_crp()
     const int nz = 40;
     const int ny = 4;
 
-    // selection to draw
-    int izmin = 0;
-    int izmax = 40;
+    // selection to draw, [izmin, izmax) x [iymin, iymax)
+    int izmin = 1;
+    int izmax = 5;
     int iymin = 0;
-    int iymax = 4;
+    int iymax = 2;
 
     int niz = izmax - izmin;
     int niy = iymax - iymin;
@@ -42,14 +42,14 @@ void plot_crp()
                 // std::cerr << "Can not find " << hist_name.c_str() << std::endl;
                 continue;
             }
-            // hist->SetStats(0);
 
+            // hist for axis
             const auto ha_name = hist_name + "axis";
             auto ha = new TH2F(ha_name.c_str(), hist_name.c_str(),
                                hist->GetXaxis()->GetNbins(),
                                hist->GetXaxis()->GetXmin(),
                                hist->GetXaxis()->GetXmax(),
-                               3500, 0, 3500);
+                               2000, 1500, 3500);
             ha->GetXaxis()->SetTitle("channel");
             ha->GetYaxis()->SetTitle("tick");
             ha->SetStats(0);
