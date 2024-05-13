@@ -230,7 +230,8 @@ local tag_rules = {
 // local bi_manifold = f.multifanpipe('DepoSetFanout', multipass, 'FrameFanin', [1,1], [1,1], [1,1], [1,1], 'sn_mag_nf', outtags, tag_rules);
 // local bi_manifold = f.multifanpipe('DepoSetFanout', multipass, 'FrameFanin', [1,1], [1,6], [1,1], [1,6], 'sn_mag_nf', outtags, tag_rules);
 // local bi_manifold = f.multifanpipe('DepoSetFanout', switch_pipes, 'FrameFanin', [1,1], [1,6], [1,1], [1,6], 'sn_mag_nf', outtags, tag_rules);
-local bi_manifold = f.multifanpipe('DepoSetFanout', switch_pipes, 'FrameFanin', [1,3,6,30], [3,2,5,5], [1,3,6,30], [3,2,5,5], 'sn_mag_nf', outtags, tag_rules);
+local bi_manifold = f.multifanpipe('DepoSetFanout', multipass, 'FrameFanin', [1,3,6,30], [3,2,5,5], [1,3,6,30], [3,2,5,5], 'sn_mag_nf', outtags, tag_rules);
+// local bi_manifold = f.multifanpipe('DepoSetFanout', switch_pipes, 'FrameFanin', [1,3,6,30], [3,2,5,5], [1,3,6,30], [3,2,5,5], 'sn_mag_nf', outtags, tag_rules);
 
 local retagger = g.pnode({
   type: 'Retagger',

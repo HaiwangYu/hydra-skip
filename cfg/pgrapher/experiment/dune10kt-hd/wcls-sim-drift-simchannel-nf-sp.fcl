@@ -12,7 +12,7 @@ physics :{
             tool_type: WCLS
             apps: ["TbbFlow"] #Pgrapher, TbbFlow
 
-            logsinks: ["stdout:info", "wcls-sim-drift-simchannel.log:debug"]
+            logsinks: ["stdout"]
             loglevels: ["debug"]
 
             plugins: ["WireCellPgraph", "WireCellGen","WireCellSio","WireCellRoot","WireCellLarsoft","WireCellTbb"]
