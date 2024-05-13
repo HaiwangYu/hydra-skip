@@ -32,7 +32,7 @@ local params = params_maker(fcl_params) {
 
 local tools_all = tools_maker(params);
 local tools =tools_all {
-  anodes: [tools_all.anodes[0], tools_all.anodes[1], tools_all.anodes[2], tools_all.anodes[6], tools_all.anodes[7], tools_all.anodes[8]],
+//   anodes: [tools_all.anodes[0], tools_all.anodes[1], tools_all.anodes[2], tools_all.anodes[6], tools_all.anodes[7], tools_all.anodes[8]],
 };
 
 local sim_maker = import 'pgrapher/experiment/dune10kt-hd/sim.jsonnet';
@@ -183,6 +183,39 @@ local multipass = [
              'multipass%d' % n)
   for n in anode_iota
 ];
+
+
+local make_switch_pipe = function(d2f, anode ) {
+    local ds_filter = g.pnode({
+        type: "DepoSetFilter",
+        name: "ds-filter-switch-%d" % anode.data.ident,
+        data: {anode: wc.tn(anode)},
+        }, nin=1, nout=1, uses=[anode]),
+    local dorb = g.pnode({
+        type: "DeposOrBust",
+        name: "dorb-switch-%d" % anode.data.ident,
+        }, nin=1, nout=2),
+    local frame_sync = g.pnode({
+        type: "FrameSync",
+        name: "frame-sync-switch-%d" % anode.data.ident,
+        }, nin=2, nout=1),
+    ret1: g.intern(
+        innodes=[ds_filter],
+        outnodes=[frame_sync],
+        centernodes=[dorb, d2f],
+        edges=
+            [g.edge(ds_filter, dorb, 0, 0),
+            g.edge(dorb, d2f, 0, 0),
+            g.edge(d2f, frame_sync, 0, 0),
+            g.edge(dorb, frame_sync, 1, 1)]),
+    ret2: g.pipeline([ds_filter, d2f]),
+}.ret1;
+
+local switch_pipes = [
+    make_switch_pipe(multipass[n], tools.anodes[n]),
+    for n in std.range(0, std.length(tools.anodes) - 1)
+];
+
 local outtags = [];
 local tag_rules = {
     frame: {
@@ -195,7 +228,9 @@ local tag_rules = {
 };
 
 // local bi_manifold = f.multifanpipe('DepoSetFanout', multipass, 'FrameFanin', [1,1], [1,1], [1,1], [1,1], 'sn_mag_nf', outtags, tag_rules);
-local bi_manifold = f.multifanpipe('DepoSetFanout', multipass, 'FrameFanin', [1,1], [1,6], [1,1], [1,6], 'sn_mag_nf', outtags, tag_rules);
+// local bi_manifold = f.multifanpipe('DepoSetFanout', multipass, 'FrameFanin', [1,1], [1,6], [1,1], [1,6], 'sn_mag_nf', outtags, tag_rules);
+// local bi_manifold = f.multifanpipe('DepoSetFanout', switch_pipes, 'FrameFanin', [1,1], [1,6], [1,1], [1,6], 'sn_mag_nf', outtags, tag_rules);
+local bi_manifold = f.multifanpipe('DepoSetFanout', switch_pipes, 'FrameFanin', [1,3,6,30], [3,2,5,5], [1,3,6,30], [3,2,5,5], 'sn_mag_nf', outtags, tag_rules);
 
 local retagger = g.pnode({
   type: 'Retagger',
@@ -221,7 +256,7 @@ local sink = sim.frame_sink;
 local graph = g.pipeline([wcls_input.depos, drifter, wcls_simchannel_sink, bagger, bi_manifold, retagger, wcls_output.sp_signals, sink]);
 
 local app = {
-  type: 'Pgrapher',
+  type: 'TbbFlow', // Pgrapher, TbbFlow
   data: {
     edges: g.edges(graph),
   },
