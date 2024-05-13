@@ -160,7 +160,7 @@ function(params) base {
     },
 
     files: {
-        wires: "dune10kt-1x2x6-wires-larsoft-v1.json.bz2", // "protodune-wires-larsoft-v4.json.bz2",
+        wires: "dune10kt_v7_refactored.json.bz2", // "protodune-wires-larsoft-v4.json.bz2",
 
         fields: [
             // "garfield-1d-3planes-21wires-6impacts-dune-v1.json.bz2",

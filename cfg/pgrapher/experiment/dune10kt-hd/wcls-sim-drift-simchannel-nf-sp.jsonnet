@@ -32,7 +32,7 @@ local params = params_maker(fcl_params) {
 
 local tools_all = tools_maker(params);
 local tools =tools_all {
-    anodes: [tools_all.anodes[7]],
+  anodes: [tools_all.anodes[0], tools_all.anodes[1], tools_all.anodes[2], tools_all.anodes[6], tools_all.anodes[7], tools_all.anodes[8]],
 };
 
 local sim_maker = import 'pgrapher/experiment/dune10kt-hd/sim.jsonnet';
@@ -194,8 +194,8 @@ local tag_rules = {
         + {['dnnsp%d' % anode.data.ident]: ['dnnsp%d' % anode.data.ident] for anode in tools.anodes},
 };
 
-local bi_manifold = f.multifanpipe('DepoSetFanout', multipass, 'FrameFanin', [1,1], [1,1], [1,1], [1,1], 'sn_mag_nf', outtags, tag_rules);
-// local bi_manifold = f.multifanpipe('DepoSetFanout', multipass, 'FrameFanin', [1,2], [2,6], [1,2], [2,6], 'sn_mag_nf', outtags, tag_rules);
+// local bi_manifold = f.multifanpipe('DepoSetFanout', multipass, 'FrameFanin', [1,1], [1,1], [1,1], [1,1], 'sn_mag_nf', outtags, tag_rules);
+local bi_manifold = f.multifanpipe('DepoSetFanout', multipass, 'FrameFanin', [1,1], [1,6], [1,1], [1,6], 'sn_mag_nf', outtags, tag_rules);
 
 local retagger = g.pnode({
   type: 'Retagger',
