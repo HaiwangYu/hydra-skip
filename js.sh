@@ -12,7 +12,14 @@ if [[ $1 == "json" || $1 == "all" ]]; then
 $jsonnet \
 --ext-str input="depos-vd-1x8x14-genie/depos-4.tar.bz2" \
 --ext-code channel_per_crm=900 \
--J $cfg ${name}.jsonnet \
+--ext-code driftSpeed=1.6 \
+--ext-code DL=10 \
+--ext-code DT=10 \
+--ext-code lifetime=10 \
+--ext-code G4RefTime=0 \
+-J $cfg \
+-J /exp/dune/app/users/yuhw/dunefd/hydra-skip/cfg \
+${name}.jsonnet \
 -o ${name}.json
 fi
 
