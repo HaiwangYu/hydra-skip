@@ -44,6 +44,8 @@ physics :{
               driftSpeed: 1.60563
               # G4RefTime [us]
               G4RefTime: @local::dunefd_detectorclocks.G4RefTime
+              # use_hydra / skip processing
+              use_hydra: true
             }
 
          }

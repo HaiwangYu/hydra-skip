@@ -17,6 +17,7 @@ $jsonnet \
 --ext-code DT=10 \
 --ext-code lifetime=10 \
 --ext-code G4RefTime=0 \
+--ext-code use_hydra=true \
 -J $cfg \
 -J /exp/dune/app/users/yuhw/dunefd/hydra-skip/cfg \
 ${name}.jsonnet \

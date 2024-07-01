@@ -15,6 +15,7 @@ local tools_maker = import 'pgrapher/common/tools.jsonnet';
 local params_maker = import 'pgrapher/experiment/dune10kt-hd/simparams.jsonnet';
 local fcl_params = {
     G4RefTime: std.extVar('G4RefTime') * wc.us,
+    use_hydra: std.extVar('use_hydra'),
 };
 local params = params_maker(fcl_params) {
   lar: super.lar {
@@ -178,7 +179,7 @@ local multipass = [
                // sinks.orig_pipe[n],
                // nf_pipes[n],
                sp_pipes[n],
-               sinks.decon_pipe[n],
+               // sinks.decon_pipe[n],
              ],
              'multipass%d' % n)
   for n in anode_iota
@@ -230,8 +231,13 @@ local tag_rules = {
 // local bi_manifold = f.multifanpipe('DepoSetFanout', multipass, 'FrameFanin', [1,1], [1,1], [1,1], [1,1], 'sn_mag_nf', outtags, tag_rules);
 // local bi_manifold = f.multifanpipe('DepoSetFanout', multipass, 'FrameFanin', [1,1], [1,6], [1,1], [1,6], 'sn_mag_nf', outtags, tag_rules);
 // local bi_manifold = f.multifanpipe('DepoSetFanout', switch_pipes, 'FrameFanin', [1,1], [1,6], [1,1], [1,6], 'sn_mag_nf', outtags, tag_rules);
-local bi_manifold = f.multifanpipe('DepoSetFanout', multipass, 'FrameFanin', [1,3,6,30], [3,2,5,5], [1,3,6,30], [3,2,5,5], 'sn_mag_nf', outtags, tag_rules);
+local bi_manifold =
+if fcl_params.use_hydra then
+    f.multifanpipe('DepoSetFanout', switch_pipes, 'FrameFanin', [1,3,6,30], [3,2,5,5], [1,3,6,30], [3,2,5,5], 'sn_mag_nf', outtags, tag_rules)
+else
+    f.multifanpipe('DepoSetFanout', multipass, 'FrameFanin', [1,3,6,30], [3,2,5,5], [1,3,6,30], [3,2,5,5], 'sn_mag_nf', outtags, tag_rules);
 // local bi_manifold = f.multifanpipe('DepoSetFanout', switch_pipes, 'FrameFanin', [1,3,6,30], [3,2,5,5], [1,3,6,30], [3,2,5,5], 'sn_mag_nf', outtags, tag_rules);
+// local bi_manifold = f.multifanpipe('DepoSetFanout', multipass, 'FrameFanin', [1,3,6,30], [3,2,5,5], [1,3,6,30], [3,2,5,5], 'sn_mag_nf', outtags, tag_rules);
 
 local retagger = g.pnode({
   type: 'Retagger',
