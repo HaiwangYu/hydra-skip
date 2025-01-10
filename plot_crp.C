@@ -10,7 +10,7 @@ using namespace std;
 
 void plot_crp()
 {
-    const char *in_file_name = "mag-sim-sp.root";
+    const char *in_file_name = "mag.root";
 
     const int nz = 40;
     const int ny = 4;
