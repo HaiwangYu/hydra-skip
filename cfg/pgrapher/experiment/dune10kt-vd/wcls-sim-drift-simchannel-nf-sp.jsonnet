@@ -22,6 +22,7 @@ local fcl_params = {
     ncrm: std.extVar('ncrm'),
     use_dnnroi: std.extVar('use_dnnroi'),
     process_crm: std.extVar('process_crm'),
+    use_hydra: std.extVar('use_hydra'),
 };
 local params_maker =
 if fcl_params.ncrm == 320 then import 'pgrapher/experiment/dune10kt-vd/params-10kt.jsonnet'
@@ -286,24 +287,24 @@ local switch_pipes = [
     for n in std.range(0, std.length(tools.anodes) - 1)
 ];
 
+local process_pipes = if fcl_params.use_hydra then switch_pipes else multipass;
+
 local bi_manifold =
     if fcl_params.process_crm == "test1"
-    then f.multifanpipe('DepoSetFanout', multipass, 'FrameFanin', [1,1], [1,1], [1,1], [1,1], 'sn_mag', outtags, tag_rules)
+    then f.multifanpipe('DepoSetFanout', process_pipes, 'FrameFanin', [1,1], [1,1], [1,1], [1,1], 'sn_mag', outtags, tag_rules)
     else if fcl_params.process_crm == "test2"
-    then f.multifanpipe('DepoSetFanout', switch_pipes, 'FrameFanin', [1,4], [4,1], [1,4], [4,1], 'sn_mag', outtags, tag_rules)
-    // then f.multifanpipe('DepoSetFanout', multipass, 'FrameFanin', [1,4], [4,1], [1,4], [4,1], 'sn_mag', outtags, tag_rules)
+    then f.multifanpipe('DepoSetFanout', process_pipes, 'FrameFanin', [1,4], [4,1], [1,4], [4,1], 'sn_mag', outtags, tag_rules)
     else if fcl_params.ncrm == 36
-    then f.multifanpipe('DepoSetFanout', multipass, 'FrameFanin', [1,6], [6,6], [1,6], [6,6], 'sn_mag', outtags, tag_rules)
+    then f.multifanpipe('DepoSetFanout', process_pipes, 'FrameFanin', [1,6], [6,6], [1,6], [6,6], 'sn_mag', outtags, tag_rules)
     else if fcl_params.ncrm == 24
-    then f.multifanpipe('DepoSetFanout', switch_pipes, 'FrameFanin', [1,4], [4,6], [1,4], [4,6], 'sn_mag', outtags, tag_rules)
-    // then f.multifanpipe('DepoSetFanout', multipass, 'FrameFanin', [1,4], [4,6], [1,4], [4,6], 'sn_mag', outtags, tag_rules)
+    then f.multifanpipe('DepoSetFanout', process_pipes, 'FrameFanin', [1,4], [4,6], [1,4], [4,6], 'sn_mag', outtags, tag_rules)
     else if fcl_params.ncrm == 48 || fcl_params.process_crm == "partial"
-    then f.multifanpipe('DepoSetFanout', multipass, 'FrameFanin', [1,8], [8,6], [1,8], [8,6], 'sn_mag', outtags, tag_rules)
+    then f.multifanpipe('DepoSetFanout', process_pipes, 'FrameFanin', [1,8], [8,6], [1,8], [8,6], 'sn_mag', outtags, tag_rules)
     else if fcl_params.ncrm == 112
-    then f.multifanpipe('DepoSetFanout', multipass, 'FrameFanin', [1,8,16], [8,2,7], [1,8,16], [8,2,7], 'sn_mag', outtags, tag_rules)
+    then f.multifanpipe('DepoSetFanout', process_pipes, 'FrameFanin', [1,8,16], [8,2,7], [1,8,16], [8,2,7], 'sn_mag', outtags, tag_rules)
     else if fcl_params.ncrm == 320
-    then f.multifanpipe('DepoSetFanout', switch_pipes, 'FrameFanin', [1,2,8,32], [2,4,4,10], [1,2,8,32], [2,4,4,10], 'sn_mag', outtags, tag_rules);
-    // then f.multifanpipe('DepoSetFanout', multipass, 'FrameFanin', [1,2,8,32], [2,4,4,10], [1,2,8,32], [2,4,4,10], 'sn_mag', outtags, tag_rules);
+    then f.multifanpipe('DepoSetFanout', process_pipes, 'FrameFanin', [1,2,8,32], [2,4,4,10], [1,2,8,32], [2,4,4,10], 'sn_mag', outtags, tag_rules);
+
 
 local retagger = g.pnode({
   type: 'Retagger',

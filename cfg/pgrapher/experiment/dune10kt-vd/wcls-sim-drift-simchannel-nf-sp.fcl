@@ -54,7 +54,7 @@ physics :{
                 # 3view-30deg: default, 3view: dunevd_3view
                 geo_planeid_labels: "default"
                 # process pratial or all CRMs: all or test2
-                process_crm: "all"
+                process_crm: "test2"
             }
             structs: {
                 # number of time samples
@@ -75,6 +75,7 @@ physics :{
                 ncrm: 320
                 # use dnn_roi or not
                 use_dnnroi: false
+                use_hydra: true
             }
 
          }
