@@ -24,8 +24,8 @@ local fcl_params = {
     process_crm: std.extVar('process_crm'),
 };
 local params_maker =
-if fcl_params.ncrm == 320 then import 'pgrapher/experiment/dune-vd/params-10kt.jsonnet'
-else import 'pgrapher/experiment/dune-vd/params.jsonnet';
+if fcl_params.ncrm == 320 then import 'pgrapher/experiment/dune10kt-vd/params-10kt.jsonnet'
+else import 'pgrapher/experiment/dune10kt-vd/params.jsonnet';
 local params = params_maker(fcl_params) {
   lar: super.lar {
     // Longitudinal diffusion constant
@@ -54,7 +54,7 @@ else if fcl_params.process_crm == "test2"
 then tools_all {anodes: [tools_all.anodes[n] for n in [0,1,4,5]]}
 else tools_all;
 
-local sim_maker = import 'pgrapher/experiment/dune-vd/sim.jsonnet';
+local sim_maker = import 'pgrapher/experiment/dune10kt-vd/sim.jsonnet';
 local sim = sim_maker(params, tools);
 
 local nanodes = std.length(tools.anodes);
@@ -168,11 +168,11 @@ local chndb = [{
 //local noise_epoch = "after";
 //local chndb_pipes = [chndb_maker(params, tools.anodes[n], tools.fields[n]).wct(noise_epoch)
 //                for n in std.range(0, std.length(tools.anodes)-1)];
-local nf_maker = import 'pgrapher/experiment/dune-vd/nf.jsonnet';
+local nf_maker = import 'pgrapher/experiment/dune10kt-vd/nf.jsonnet';
 // local nf_pipes = [nf_maker(params, tools.anodes[n], chndb_pipes[n]) for n in std.range(0, std.length(tools.anodes)-1)];
 local nf_pipes = [nf_maker(params, tools.anodes[n], chndb[n], n, name='nf%d' % n) for n in anode_iota];
 
-local sp_maker = import 'pgrapher/experiment/dune-vd/sp.jsonnet';
+local sp_maker = import 'pgrapher/experiment/dune10kt-vd/sp.jsonnet';
 local sp_override = if fcl_params.use_dnnroi then
 {
     sparse: true,
@@ -220,7 +220,7 @@ local wcls_simchannel_sink = g.pnode({
   },
 }, nin=1, nout=1, uses=tools.anodes);
 
-local magoutput = 'mag-vd.root';
+local magoutput = 'mag.root';
 local magnify = import 'pgrapher/experiment/dune-vd/magnify-sinks.jsonnet';
 local sinks = magnify(tools, magoutput);
 
