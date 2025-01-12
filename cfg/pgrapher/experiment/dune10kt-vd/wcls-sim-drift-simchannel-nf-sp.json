@@ -1081,6 +1081,29 @@
    },
    {
       "data": {
+         "multiplicity": 2
+      },
+      "name": "fout-switch-bust-0",
+      "type": "FrameFanout"
+   },
+   {
+      "data": {
+         "multiplicity": 2
+      },
+      "name": "fout-switch-rawdigits-0",
+      "type": "FrameFanout"
+   },
+   {
+      "name": "frame-sync-switch-rawdigits-0",
+      "type": "FrameSync"
+   },
+   {
+      "data": { },
+      "name": "switch-dump-rawdigits-0",
+      "type": "DumpFrames"
+   },
+   {
+      "data": {
          "anode": "AnodePlane:crm1"
       },
       "name": "ds-filter-switch-1",
@@ -1228,6 +1251,29 @@
       },
       "name": "magdecon1",
       "type": "MagnifySink"
+   },
+   {
+      "data": {
+         "multiplicity": 2
+      },
+      "name": "fout-switch-bust-1",
+      "type": "FrameFanout"
+   },
+   {
+      "data": {
+         "multiplicity": 2
+      },
+      "name": "fout-switch-rawdigits-1",
+      "type": "FrameFanout"
+   },
+   {
+      "name": "frame-sync-switch-rawdigits-1",
+      "type": "FrameSync"
+   },
+   {
+      "data": { },
+      "name": "switch-dump-rawdigits-1",
+      "type": "DumpFrames"
    },
    {
       "data": {
@@ -1381,6 +1427,29 @@
    },
    {
       "data": {
+         "multiplicity": 2
+      },
+      "name": "fout-switch-bust-4",
+      "type": "FrameFanout"
+   },
+   {
+      "data": {
+         "multiplicity": 2
+      },
+      "name": "fout-switch-rawdigits-4",
+      "type": "FrameFanout"
+   },
+   {
+      "name": "frame-sync-switch-rawdigits-4",
+      "type": "FrameSync"
+   },
+   {
+      "data": { },
+      "name": "switch-dump-rawdigits-4",
+      "type": "DumpFrames"
+   },
+   {
+      "data": {
          "anode": "AnodePlane:crm5"
       },
       "name": "ds-filter-switch-5",
@@ -1528,6 +1597,29 @@
       },
       "name": "magdecon5",
       "type": "MagnifySink"
+   },
+   {
+      "data": {
+         "multiplicity": 2
+      },
+      "name": "fout-switch-bust-5",
+      "type": "FrameFanout"
+   },
+   {
+      "data": {
+         "multiplicity": 2
+      },
+      "name": "fout-switch-rawdigits-5",
+      "type": "FrameFanout"
+   },
+   {
+      "name": "frame-sync-switch-rawdigits-5",
+      "type": "FrameSync"
+   },
+   {
+      "data": { },
+      "name": "switch-dump-rawdigits-5",
+      "type": "DumpFrames"
    },
    {
       "data": {
@@ -1905,11 +1997,31 @@
             },
             {
                "head": {
-                  "node": "DepoTransform:ductor0",
+                  "node": "FrameFanout:fout-switch-bust-0",
                   "port": 0
                },
                "tail": {
                   "node": "DeposOrBust:dorb-switch-0",
+                  "port": 0
+               }
+            },
+            {
+               "head": {
+                  "node": "DepoTransform:ductor0",
+                  "port": 0
+               },
+               "tail": {
+                  "node": "FrameFanout:fout-switch-bust-0",
+                  "port": 0
+               }
+            },
+            {
+               "head": {
+                  "node": "OmnibusSigProc:crm0sigproc0",
+                  "port": 0
+               },
+               "tail": {
+                  "node": "FrameFanout:fout-switch-rawdigits-0",
                   "port": 0
                }
             },
@@ -1929,8 +2041,38 @@
                   "port": 1
                },
                "tail": {
-                  "node": "DeposOrBust:dorb-switch-0",
+                  "node": "FrameFanout:fout-switch-bust-0",
+                  "port": 0
+               }
+            },
+            {
+               "head": {
+                  "node": "FrameSync:frame-sync-switch-rawdigits-0",
+                  "port": 0
+               },
+               "tail": {
+                  "node": "FrameFanout:fout-switch-rawdigits-0",
+                  "port": 0
+               }
+            },
+            {
+               "head": {
+                  "node": "FrameSync:frame-sync-switch-rawdigits-0",
                   "port": 1
+               },
+               "tail": {
+                  "node": "FrameFanout:fout-switch-bust-0",
+                  "port": 1
+               }
+            },
+            {
+               "head": {
+                  "node": "DumpFrames:switch-dump-rawdigits-0",
+                  "port": 0
+               },
+               "tail": {
+                  "node": "FrameSync:frame-sync-switch-rawdigits-0",
+                  "port": 0
                }
             },
             {
@@ -1985,11 +2127,31 @@
             },
             {
                "head": {
-                  "node": "DepoTransform:ductor1",
+                  "node": "FrameFanout:fout-switch-bust-1",
                   "port": 0
                },
                "tail": {
                   "node": "DeposOrBust:dorb-switch-1",
+                  "port": 0
+               }
+            },
+            {
+               "head": {
+                  "node": "DepoTransform:ductor1",
+                  "port": 0
+               },
+               "tail": {
+                  "node": "FrameFanout:fout-switch-bust-1",
+                  "port": 0
+               }
+            },
+            {
+               "head": {
+                  "node": "OmnibusSigProc:crm1sigproc1",
+                  "port": 0
+               },
+               "tail": {
+                  "node": "FrameFanout:fout-switch-rawdigits-1",
                   "port": 0
                }
             },
@@ -2009,8 +2171,38 @@
                   "port": 1
                },
                "tail": {
-                  "node": "DeposOrBust:dorb-switch-1",
+                  "node": "FrameFanout:fout-switch-bust-1",
+                  "port": 0
+               }
+            },
+            {
+               "head": {
+                  "node": "FrameSync:frame-sync-switch-rawdigits-1",
+                  "port": 0
+               },
+               "tail": {
+                  "node": "FrameFanout:fout-switch-rawdigits-1",
+                  "port": 0
+               }
+            },
+            {
+               "head": {
+                  "node": "FrameSync:frame-sync-switch-rawdigits-1",
                   "port": 1
+               },
+               "tail": {
+                  "node": "FrameFanout:fout-switch-bust-1",
+                  "port": 1
+               }
+            },
+            {
+               "head": {
+                  "node": "DumpFrames:switch-dump-rawdigits-1",
+                  "port": 0
+               },
+               "tail": {
+                  "node": "FrameSync:frame-sync-switch-rawdigits-1",
+                  "port": 0
                }
             },
             {
@@ -2065,11 +2257,31 @@
             },
             {
                "head": {
-                  "node": "DepoTransform:ductor4",
+                  "node": "FrameFanout:fout-switch-bust-4",
                   "port": 0
                },
                "tail": {
                   "node": "DeposOrBust:dorb-switch-4",
+                  "port": 0
+               }
+            },
+            {
+               "head": {
+                  "node": "DepoTransform:ductor4",
+                  "port": 0
+               },
+               "tail": {
+                  "node": "FrameFanout:fout-switch-bust-4",
+                  "port": 0
+               }
+            },
+            {
+               "head": {
+                  "node": "OmnibusSigProc:crm4sigproc4",
+                  "port": 0
+               },
+               "tail": {
+                  "node": "FrameFanout:fout-switch-rawdigits-4",
                   "port": 0
                }
             },
@@ -2089,8 +2301,38 @@
                   "port": 1
                },
                "tail": {
-                  "node": "DeposOrBust:dorb-switch-4",
+                  "node": "FrameFanout:fout-switch-bust-4",
+                  "port": 0
+               }
+            },
+            {
+               "head": {
+                  "node": "FrameSync:frame-sync-switch-rawdigits-4",
+                  "port": 0
+               },
+               "tail": {
+                  "node": "FrameFanout:fout-switch-rawdigits-4",
+                  "port": 0
+               }
+            },
+            {
+               "head": {
+                  "node": "FrameSync:frame-sync-switch-rawdigits-4",
                   "port": 1
+               },
+               "tail": {
+                  "node": "FrameFanout:fout-switch-bust-4",
+                  "port": 1
+               }
+            },
+            {
+               "head": {
+                  "node": "DumpFrames:switch-dump-rawdigits-4",
+                  "port": 0
+               },
+               "tail": {
+                  "node": "FrameSync:frame-sync-switch-rawdigits-4",
+                  "port": 0
                }
             },
             {
@@ -2145,11 +2387,31 @@
             },
             {
                "head": {
-                  "node": "DepoTransform:ductor5",
+                  "node": "FrameFanout:fout-switch-bust-5",
                   "port": 0
                },
                "tail": {
                   "node": "DeposOrBust:dorb-switch-5",
+                  "port": 0
+               }
+            },
+            {
+               "head": {
+                  "node": "DepoTransform:ductor5",
+                  "port": 0
+               },
+               "tail": {
+                  "node": "FrameFanout:fout-switch-bust-5",
+                  "port": 0
+               }
+            },
+            {
+               "head": {
+                  "node": "OmnibusSigProc:crm5sigproc5",
+                  "port": 0
+               },
+               "tail": {
+                  "node": "FrameFanout:fout-switch-rawdigits-5",
                   "port": 0
                }
             },
@@ -2169,8 +2431,38 @@
                   "port": 1
                },
                "tail": {
-                  "node": "DeposOrBust:dorb-switch-5",
+                  "node": "FrameFanout:fout-switch-bust-5",
+                  "port": 0
+               }
+            },
+            {
+               "head": {
+                  "node": "FrameSync:frame-sync-switch-rawdigits-5",
+                  "port": 0
+               },
+               "tail": {
+                  "node": "FrameFanout:fout-switch-rawdigits-5",
+                  "port": 0
+               }
+            },
+            {
+               "head": {
+                  "node": "FrameSync:frame-sync-switch-rawdigits-5",
                   "port": 1
+               },
+               "tail": {
+                  "node": "FrameFanout:fout-switch-bust-5",
+                  "port": 1
+               }
+            },
+            {
+               "head": {
+                  "node": "DumpFrames:switch-dump-rawdigits-5",
+                  "port": 0
+               },
+               "tail": {
+                  "node": "FrameSync:frame-sync-switch-rawdigits-5",
+                  "port": 0
                }
             },
             {
@@ -2255,7 +2547,7 @@
             },
             {
                "head": {
-                  "node": "OmnibusSigProc:crm0sigproc0",
+                  "node": "FrameFanout:fout-switch-rawdigits-0",
                   "port": 0
                },
                "tail": {
@@ -2265,7 +2557,7 @@
             },
             {
                "head": {
-                  "node": "OmnibusSigProc:crm1sigproc1",
+                  "node": "FrameFanout:fout-switch-rawdigits-1",
                   "port": 0
                },
                "tail": {
@@ -2275,7 +2567,7 @@
             },
             {
                "head": {
-                  "node": "OmnibusSigProc:crm4sigproc4",
+                  "node": "FrameFanout:fout-switch-rawdigits-4",
                   "port": 0
                },
                "tail": {
@@ -2285,7 +2577,7 @@
             },
             {
                "head": {
-                  "node": "OmnibusSigProc:crm5sigproc5",
+                  "node": "FrameFanout:fout-switch-rawdigits-5",
                   "port": 0
                },
                "tail": {
