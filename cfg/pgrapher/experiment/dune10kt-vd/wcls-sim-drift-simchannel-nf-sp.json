@@ -1935,16 +1935,6 @@
             },
             {
                "head": {
-                  "node": "MagnifySink:magdecon0",
-                  "port": 0
-               },
-               "tail": {
-                  "node": "OmnibusSigProc:crm0sigproc0",
-                  "port": 0
-               }
-            },
-            {
-               "head": {
                   "node": "Reframer:reframer0",
                   "port": 0
                },
@@ -1970,6 +1960,16 @@
                },
                "tail": {
                   "node": "AddNoise:addnoiseempericalnoisecrm0",
+                  "port": 0
+               }
+            },
+            {
+               "head": {
+                  "node": "MagnifySink:magdecon0",
+                  "port": 0
+               },
+               "tail": {
+                  "node": "OmnibusSigProc:crm0sigproc0",
                   "port": 0
                }
             },
@@ -2015,16 +2015,6 @@
             },
             {
                "head": {
-                  "node": "MagnifySink:magdecon1",
-                  "port": 0
-               },
-               "tail": {
-                  "node": "OmnibusSigProc:crm1sigproc1",
-                  "port": 0
-               }
-            },
-            {
-               "head": {
                   "node": "Reframer:reframer1",
                   "port": 0
                },
@@ -2050,6 +2040,16 @@
                },
                "tail": {
                   "node": "AddNoise:addnoiseempericalnoisecrm1",
+                  "port": 0
+               }
+            },
+            {
+               "head": {
+                  "node": "MagnifySink:magdecon1",
+                  "port": 0
+               },
+               "tail": {
+                  "node": "OmnibusSigProc:crm1sigproc1",
                   "port": 0
                }
             },
@@ -2095,16 +2095,6 @@
             },
             {
                "head": {
-                  "node": "MagnifySink:magdecon4",
-                  "port": 0
-               },
-               "tail": {
-                  "node": "OmnibusSigProc:crm4sigproc4",
-                  "port": 0
-               }
-            },
-            {
-               "head": {
                   "node": "Reframer:reframer4",
                   "port": 0
                },
@@ -2130,6 +2120,16 @@
                },
                "tail": {
                   "node": "AddNoise:addnoiseempericalnoisecrm4",
+                  "port": 0
+               }
+            },
+            {
+               "head": {
+                  "node": "MagnifySink:magdecon4",
+                  "port": 0
+               },
+               "tail": {
+                  "node": "OmnibusSigProc:crm4sigproc4",
                   "port": 0
                }
             },
@@ -2175,16 +2175,6 @@
             },
             {
                "head": {
-                  "node": "MagnifySink:magdecon5",
-                  "port": 0
-               },
-               "tail": {
-                  "node": "OmnibusSigProc:crm5sigproc5",
-                  "port": 0
-               }
-            },
-            {
-               "head": {
                   "node": "Reframer:reframer5",
                   "port": 0
                },
@@ -2210,6 +2200,16 @@
                },
                "tail": {
                   "node": "AddNoise:addnoiseempericalnoisecrm5",
+                  "port": 0
+               }
+            },
+            {
+               "head": {
+                  "node": "MagnifySink:magdecon5",
+                  "port": 0
+               },
+               "tail": {
+                  "node": "OmnibusSigProc:crm5sigproc5",
                   "port": 0
                }
             },
