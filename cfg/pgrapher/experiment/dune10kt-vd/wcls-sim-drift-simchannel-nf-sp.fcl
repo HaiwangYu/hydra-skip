@@ -32,6 +32,7 @@ physics :{
             outputers: [
                 "wclsSimChannelSink:postdrift",
                 "wclsFrameSaver:spsignals"
+                , "wclsFrameSaver:simdigits"
             ]
 
             // Make available parameters via Jsonnet's std.extVar()

@@ -225,6 +225,19 @@ local magoutput = 'mag.root';
 local magnify = import 'pgrapher/experiment/dune-vd/magnify-sinks.jsonnet';
 local sinks = magnify(tools, magoutput);
 
+local full_sp_pipes = [
+  g.pipeline([
+                sp_pipes[n],
+                sinks.decon_pipe[n],
+                // sinks.debug_pipe[n], // use_roi_debug_mode=true in sp.jsonnet
+             ] + if fcl_params.use_dnnroi then [
+                 dnnroi(tools.anodes[n], ts, output_scale=1.2),
+                //  sinks.dnnroi_pipe[n],
+             ] else [],
+             'full_sp_pipes%d' % n)
+  for n in anode_iota
+];
+
 local multipass = [
   g.pipeline([
                 // wcls_simchannel_sink[n],
@@ -256,7 +269,8 @@ local tag_rules = {
 };
 
 
-local make_switch_pipe = function(d2f, anode ) {
+local make_switch_pipe = function(sim, sp, anode ) {
+    local d2f = g.pipeline([sim, sp]),
     local ds_filter = g.pnode({
         type: "DepoSetFilter",
         name: "ds-filter-switch-%d" % anode.data.ident,
@@ -280,10 +294,46 @@ local make_switch_pipe = function(d2f, anode ) {
             g.edge(d2f, frame_sync, 0, 0),
             g.edge(dorb, frame_sync, 1, 1)]),
     ret2: g.pipeline([ds_filter, d2f]),
+    // special case to tapout and sync rawdigits
+    local fout_bust = g.pnode({
+        type: "FrameFanout",
+        name: "fout-switch-bust-%d" % anode.data.ident,
+        data: {multiplicity: 2},
+        }, nin=1, nout=2),
+    local fout_rawdigits = g.pnode({
+        type: "FrameFanout",
+        name: "fout-switch-rawdigits-%d" % anode.data.ident,
+        data: {multiplicity: 2},
+        }, nin=1, nout=2),
+    local frame_sync_rawdigits = g.pnode({
+        type: "FrameSync",
+        name: "frame-sync-switch-rawdigits-%d" % anode.data.ident,
+        }, nin=2, nout=1),
+    
+    local dump_rawdigits = g.pnode(
+        { type: 'DumpFrames', name:"switch-dump-rawdigits-%d" % anode.data.ident, data:{} },
+        nin=1, nout=0),
+    ret3: g.intern(
+        innodes=[ds_filter],
+        outnodes=[frame_sync],
+        centernodes=[dorb, sim, sp, fout_bust, fout_rawdigits, frame_sync_rawdigits, dump_rawdigits],
+        edges=
+            [g.edge(ds_filter, dorb, 0, 0),
+            g.edge(dorb, fout_bust, 0, 0),
+            g.edge(fout_bust, sim, 0, 0),
+            g.edge(sim, fout_rawdigits, 0, 0),
+            g.edge(fout_rawdigits, sp, 0, 0),
+            g.edge(sp, frame_sync, 0, 0),
+            g.edge(fout_bust, frame_sync, 0, 1),
+            g.edge(fout_rawdigits, frame_sync_rawdigits, 0, 0),
+            g.edge(fout_bust, frame_sync_rawdigits, 1, 1),
+            g.edge(frame_sync_rawdigits, dump_rawdigits, 0, 0),
+            ]
+    ),
 }.ret1;
 
 local switch_pipes = [
-    make_switch_pipe(multipass[n], tools.anodes[n]),
+    make_switch_pipe(sn_pipes[n], full_sp_pipes[n], tools.anodes[n]),
     for n in std.range(0, std.length(tools.anodes) - 1)
 ];
 
@@ -328,8 +378,41 @@ local retagger = g.pnode({
 //local frameio = io.numpy.frames(output);
 local sink = sim.frame_sink;
 
-local graph = g.pipeline([wcls_input.depos, drifter, wcls_simchannel_sink, bagger, bi_manifold, retagger, wcls_output.sp_signals, sink]);
+
+// Build an incomplete subgraph ending to be spliced for saving out frames 
+local osimfanin = g.pnode({ 
+    type: 'FrameFanin',
+    name:"osimfanin",
+    data:{
+        multiplicity: std.length(tools.anodes),
+        tags: ['orig%d' % n for n in anode_iota],
+    } 
+}, nin=std.length(tools.anodes), nout=1);
+local osimdump = g.pnode({ type: 'DumpFrames', name:"osimdump", data:{} }, nin=1, nout=0);
+local osimtagger = g.pnode({
+  type: 'Retagger',
+  name: 'osimtagger',
+  data: {
+    tag_rules: [{
+      frame: {'.*': 'daq',},
+      merge: {
+        'orig\\d': 'orig',
+      },
+    }],
+  },
+}, nin=1, nout=1);
+local osimsaver = g.pipeline([osimfanin, osimtagger, wcls_output.sim_digits, osimdump]);
+
+local edge_selector(e) = std.startsWith(e.tail.node, "Digitizer:");
+// local fanout_factory(n,e) = { type:'FrameFanout', name:"splice%d"%n };
+local fanout_factory(n,e) = { type:'FrameFanout', name:"splice%d"%n, data:{multiplicity: 2} }; // "2-wire" splice
+
+
+
+local main_graph = g.pipeline([wcls_input.depos, drifter, wcls_simchannel_sink, bagger, bi_manifold, retagger, wcls_output.sp_signals, sink]);
 // local graph = g.pipeline([wcls_input.deposet, setdrifter, wcls_simchannel_sink, bi_manifold, retagger, wcls_output.sp_signals, sink]);
+
+local graph = g.splice(main_graph, osimsaver, edge_selector, fanout_factory);
 
 local app = {
     type: 'TbbFlow', //Pgrapher, TbbFlow
