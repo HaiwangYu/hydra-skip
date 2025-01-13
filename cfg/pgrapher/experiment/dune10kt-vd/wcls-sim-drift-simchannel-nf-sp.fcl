@@ -39,8 +39,8 @@ physics :{
             params: {
                 # file: wires
                 # dunevd10kt_3view_30deg_v6_refactored.json.bz2
-                # dunevd10kt_3view_30deg_v5_refactored_1x8x6ref.json.bz2
-                files_wires: "dunevd10kt_3view_30deg_v6_refactored.json.bz2"
+                files_wires: "dunevd10kt_3view_30deg_v5_refactored_1x8x6ref.json.bz2"
+                # files_wires: "dunevd10kt_3view_30deg_v6_refactored.json.bz2"
                 # file: fields
                 # dunevd-resp-isoc3views-18d92.json.bz2 30,-30,90
                 # pcbro-response-avg-12d50.json.bz2 2view prototype

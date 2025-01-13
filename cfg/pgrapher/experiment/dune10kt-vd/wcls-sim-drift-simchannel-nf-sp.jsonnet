@@ -225,6 +225,16 @@ local magoutput = 'mag.root';
 local magnify = import 'pgrapher/experiment/dune-vd/magnify-sinks.jsonnet';
 local sinks = magnify(tools, magoutput);
 
+
+local full_sim_pipes = [
+  g.pipeline([
+                sn_pipes[n],
+                sinks.orig_pipe[n],
+             ],
+             'multipass%d' % n)
+  for n in anode_iota
+];
+
 local full_sp_pipes = [
   g.pipeline([
                 sp_pipes[n],
@@ -319,21 +329,21 @@ local make_switch_pipe = function(sim, sp, anode ) {
         centernodes=[dorb, sim, sp, fout_bust, fout_rawdigits, frame_sync_rawdigits, dump_rawdigits],
         edges=
             [g.edge(ds_filter, dorb, 0, 0),
-            g.edge(dorb, fout_bust, 0, 0),
-            g.edge(fout_bust, sim, 0, 0),
+            g.edge(dorb, sim, 0, 0),
+            g.edge(dorb, fout_bust, 1, 0),
             g.edge(sim, fout_rawdigits, 0, 0),
             g.edge(fout_rawdigits, sp, 0, 0),
             g.edge(sp, frame_sync, 0, 0),
             g.edge(fout_bust, frame_sync, 0, 1),
-            g.edge(fout_rawdigits, frame_sync_rawdigits, 0, 0),
+            g.edge(fout_rawdigits, frame_sync_rawdigits, 1, 0),
             g.edge(fout_bust, frame_sync_rawdigits, 1, 1),
             g.edge(frame_sync_rawdigits, dump_rawdigits, 0, 0),
             ]
     ),
-}.ret1;
+}.ret3;
 
 local switch_pipes = [
-    make_switch_pipe(sn_pipes[n], full_sp_pipes[n], tools.anodes[n]),
+    make_switch_pipe(full_sim_pipes[n], full_sp_pipes[n], tools.anodes[n]),
     for n in std.range(0, std.length(tools.anodes) - 1)
 ];
 
@@ -403,7 +413,7 @@ local osimtagger = g.pnode({
 }, nin=1, nout=1);
 local osimsaver = g.pipeline([osimfanin, osimtagger, wcls_output.sim_digits, osimdump]);
 
-local edge_selector(e) = std.startsWith(e.tail.node, "Digitizer:");
+local edge_selector(e) = std.startsWith(e.tail.node, "FrameSync:frame-sync-switch-rawdigits");
 // local fanout_factory(n,e) = { type:'FrameFanout', name:"splice%d"%n };
 local fanout_factory(n,e) = { type:'FrameFanout', name:"splice%d"%n, data:{multiplicity: 2} }; // "2-wire" splice
 
