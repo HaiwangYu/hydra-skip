@@ -39,8 +39,8 @@ physics :{
             params: {
                 # file: wires
                 # dunevd10kt_3view_30deg_v6_refactored.json.bz2
-                files_wires: "dunevd10kt_3view_30deg_v5_refactored_1x8x6ref.json.bz2"
-                # files_wires: "dunevd10kt_3view_30deg_v6_refactored.json.bz2"
+                # files_wires: "dunevd10kt_3view_30deg_v5_refactored_1x8x6ref.json.bz2"
+                files_wires: "dunevd10kt_3view_30deg_v6_refactored.json.bz2"
                 # file: fields
                 # dunevd-resp-isoc3views-18d92.json.bz2 30,-30,90
                 # pcbro-response-avg-12d50.json.bz2 2view prototype
@@ -55,7 +55,7 @@ physics :{
                 # 3view-30deg: default, 3view: dunevd_3view
                 geo_planeid_labels: "default"
                 # process pratial or all CRMs: all or test2
-                process_crm: "test2"
+                process_crm: "all"
             }
             structs: {
                 # number of time samples
@@ -74,9 +74,10 @@ physics :{
                 response_plane: 18.92
                 # number of CRMs, 24 for 1x8x6, 320 for 2x8x40
                 ncrm: 320
+                use_hydra: true
+                save_rawdigits: false
                 # use dnn_roi or not
                 use_dnnroi: false
-                use_hydra: true
             }
 
          }

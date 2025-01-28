@@ -23,6 +23,7 @@ local fcl_params = {
     use_dnnroi: std.extVar('use_dnnroi'),
     process_crm: std.extVar('process_crm'),
     use_hydra: std.extVar('use_hydra'),
+    save_rawdigits: std.extVar('save_rawdigits'),
 };
 local params_maker =
 if fcl_params.ncrm == 320 then import 'pgrapher/experiment/dune10kt-vd/params-10kt.jsonnet'
@@ -229,7 +230,7 @@ local sinks = magnify(tools, magoutput);
 local full_sim_pipes = [
   g.pipeline([
                 sn_pipes[n],
-                sinks.orig_pipe[n],
+                // sinks.orig_pipe[n],
              ],
              'multipass%d' % n)
   for n in anode_iota
@@ -238,7 +239,7 @@ local full_sim_pipes = [
 local full_sp_pipes = [
   g.pipeline([
                 sp_pipes[n],
-                sinks.decon_pipe[n],
+                // sinks.decon_pipe[n],
                 // sinks.debug_pipe[n], // use_roi_debug_mode=true in sp.jsonnet
              ] + if fcl_params.use_dnnroi then [
                  dnnroi(tools.anodes[n], ts, output_scale=1.2),
@@ -294,7 +295,10 @@ local make_switch_pipe = function(sim, sp, anode ) {
         type: "FrameSync",
         name: "frame-sync-switch-%d" % anode.data.ident,
         }, nin=2, nout=1),
-    ret1: g.intern(
+    // direct pipe
+    local ret1 = g.pipeline([ds_filter, d2f]),
+    // hydra shortcut
+    local ret2 =  g.intern(
         innodes=[ds_filter],
         outnodes=[frame_sync],
         centernodes=[dorb, d2f],
@@ -303,7 +307,6 @@ local make_switch_pipe = function(sim, sp, anode ) {
             g.edge(dorb, d2f, 0, 0),
             g.edge(d2f, frame_sync, 0, 0),
             g.edge(dorb, frame_sync, 1, 1)]),
-    ret2: g.pipeline([ds_filter, d2f]),
     // special case to tapout and sync rawdigits
     local fout_bust = g.pnode({
         type: "FrameFanout",
@@ -323,7 +326,8 @@ local make_switch_pipe = function(sim, sp, anode ) {
     local dump_rawdigits = g.pnode(
         { type: 'DumpFrames', name:"switch-dump-rawdigits-%d" % anode.data.ident, data:{} },
         nin=1, nout=0),
-    ret3: g.intern(
+    // hydra shortcut with rawdigits
+    local ret3 = g.intern(
         innodes=[ds_filter],
         outnodes=[frame_sync],
         centernodes=[dorb, sim, sp, fout_bust, fout_rawdigits, frame_sync_rawdigits, dump_rawdigits],
@@ -340,7 +344,8 @@ local make_switch_pipe = function(sim, sp, anode ) {
             g.edge(frame_sync_rawdigits, dump_rawdigits, 0, 0),
             ]
     ),
-}.ret3;
+    ret: if fcl_params.save_rawdigits then ret3 else ret2,
+}.ret;
 
 local switch_pipes = [
     make_switch_pipe(full_sim_pipes[n], full_sp_pipes[n], tools.anodes[n]),
@@ -350,20 +355,9 @@ local switch_pipes = [
 local process_pipes = if fcl_params.use_hydra then switch_pipes else multipass;
 
 local bi_manifold =
-    if fcl_params.process_crm == "test1"
-    then f.multifanpipe('DepoSetFanout', process_pipes, 'FrameFanin', [1,1], [1,1], [1,1], [1,1], 'sn_mag', outtags, tag_rules)
-    else if fcl_params.process_crm == "test2"
+    if fcl_params.process_crm == "test2"
     then f.multifanpipe('DepoSetFanout', process_pipes, 'FrameFanin', [1,4], [4,1], [1,4], [4,1], 'sn_mag', outtags, tag_rules)
-    else if fcl_params.ncrm == 36
-    then f.multifanpipe('DepoSetFanout', process_pipes, 'FrameFanin', [1,6], [6,6], [1,6], [6,6], 'sn_mag', outtags, tag_rules)
-    else if fcl_params.ncrm == 24
-    then f.multifanpipe('DepoSetFanout', process_pipes, 'FrameFanin', [1,4], [4,6], [1,4], [4,6], 'sn_mag', outtags, tag_rules)
-    else if fcl_params.ncrm == 48 || fcl_params.process_crm == "partial"
-    then f.multifanpipe('DepoSetFanout', process_pipes, 'FrameFanin', [1,8], [8,6], [1,8], [8,6], 'sn_mag', outtags, tag_rules)
-    else if fcl_params.ncrm == 112
-    then f.multifanpipe('DepoSetFanout', process_pipes, 'FrameFanin', [1,8,16], [8,2,7], [1,8,16], [8,2,7], 'sn_mag', outtags, tag_rules)
-    else if fcl_params.ncrm == 320
-    then f.multifanpipe('DepoSetFanout', process_pipes, 'FrameFanin', [1,2,8,32], [2,4,4,10], [1,2,8,32], [2,4,4,10], 'sn_mag', outtags, tag_rules);
+    else f.multifanpipe('DepoSetFanout', process_pipes, 'FrameFanin', [1,2,8,32], [2,4,4,10], [1,2,8,32], [2,4,4,10], 'sn_mag', outtags, tag_rules);
 
 
 local retagger = g.pnode({
@@ -390,14 +384,18 @@ local sink = sim.frame_sink;
 
 
 // Build an incomplete subgraph ending to be spliced for saving out frames 
-local osimfanin = g.pnode({ 
-    type: 'FrameFanin',
-    name:"osimfanin",
-    data:{
-        multiplicity: std.length(tools.anodes),
-        tags: ['orig%d' % n for n in anode_iota],
-    } 
-}, nin=std.length(tools.anodes), nout=1);
+// local osimfanin = g.pnode({ 
+//     type: 'FrameFanin',
+//     name:"osimfanin",
+//     data:{
+//         multiplicity: std.length(tools.anodes),
+//         tags: ['orig%d' % n for n in anode_iota],
+//     } 
+// }, nin=std.length(tools.anodes), nout=1);
+local osimfanin = 
+if fcl_params.process_crm == "test2"
+then f.multifanin('FrameFanin', [1,4], [4,1], 'osimfanin', ['orig%d' % n for n in anode_iota])
+else f.multifanin('FrameFanin', [1,2,8,32], [2,4,4,10], 'osimfanin', ['orig%d' % n for n in anode_iota]);
 local osimdump = g.pnode({ type: 'DumpFrames', name:"osimdump", data:{} }, nin=1, nout=0);
 local osimtagger = g.pnode({
   type: 'Retagger',

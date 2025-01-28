@@ -16,7 +16,7 @@ $jsonnet \
 --ext-str files_noise="dunevd10kt-1x6x6-3view-noise-spectra-v1.json.bz2" \
 --ext-str geo_planeid_labels="default" \
 --ext-str files_noise="dunevd10kt-1x6x6-3view-noise-spectra-v1.json.bz2" \
---ext-str process_crm="test2" \
+--ext-str process_crm="all" \
 --ext-code channel_per_crm=900 \
 --ext-code nticks=8500 \
 --ext-code driftSpeed=1.6 \
@@ -27,6 +27,7 @@ $jsonnet \
 --ext-code response_plane=18.92 \
 --ext-code use_hydra=true \
 --ext-code use_dnnroi=false \
+--ext-code save_rawdigits=true \
 --ext-code ncrm=320 \
 -J $cfg \
 -J /exp/dune/app/users/yuhw/dunefd/hydra-skip/cfg \
